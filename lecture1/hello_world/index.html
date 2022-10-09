@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Documentation for Hugo Learn Theme - Documentation for Hugo Learn Theme</title>
+    <title>Hello World - Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1665282386" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/lecture1/hello_world/">
     <nav id="sidebar" class="">
 
 
@@ -90,7 +90,7 @@
   
     
     <li data-nav-id="/lecture1/" title="Lecture 1" class="dd-item
-        
+        parent
         
         
         ">
@@ -116,7 +116,7 @@
  
   
     
-      <li data-nav-id="/lecture1/hello_world/" title="Hello World" class="dd-item ">
+      <li data-nav-id="/lecture1/hello_world/" title="Hello World" class="dd-item active">
         <a href="/lecture1/hello_world/">
         Hello World
         
@@ -451,33 +451,110 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/com2018-fa22/hugo-blog/tree/main/content/lecture1/hello_world.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                   Hello World
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#python">Python</a></li>
+        <li><a href="#c">C</a></li>
+      </ul>
+    </li>
+    <li><a href="#python과-c의-차이점은-무엇일까요">Python과 C의 차이점은 무엇일까요?</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Hello World
+            </h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
-           
+<p><strong>다양한 언어에서 Hello World를 콘솔 출력해봅시다.</strong></p>
+<h3 id="python">Python</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Hello World&#34;</span>)
+</span></span></code></pre></div><h3 id="c">C</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>	printf(<span style="color:#e6db74">&#34;Hello World!</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="python과-c의-차이점은-무엇일까요">Python과 C의 차이점은 무엇일까요?</h2>
+<p>많은 차이가 있지만, 큰 맥락에서 이야기해봅시다.</p>
+<p>파이썬은 코드를 한 줄씩 실행하는 <code>인터프리터</code> 언어인 반면, C는 기계어로의 변환이 필요한 <code>컴파일</code> 언어입니다.</p>
+<p>따라서 컴파일러에게 코드의 시작을 알리기 위해 <code>main</code>이라는 함수를 두게 됩니다.</p>
+<blockquote>
+<p>Java를 통해 Hello World를 출력하기 위해서는 다음과 같은 코드를 사용합니다.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Hello</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello World!&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>Java 코드는 클래스 안에 존재해야 하며, 클래스의 이름은 파일 이름과 동일해야 합니다.</li>
+<li>C와 유사하게 main 함수가 필수적이며, main 함수는 항상 public이어야 합니다.</li>
+<li>그리고 main함수의 매개변수는 String의 배열이어야 합니다.</li>
+</ul>
+
+<div class="notices tip" ><p>💡 IntelliJ에서 psvm을 입력하면 main 함수를 바로 생성할 수 있습니다.</p>
+</div>
+
+
+
+<footer class="footline">
 	
-		<h1> 한양대학교 융합전자공학부 OOP 정리노트</h1>
-		<p>
-		  본 사이트는 2022년 "COM2018: Object-Oriented Programming" 강의 중 발생한 코드를 정리합니다.
-		  <br>
-		  현재까지 정리된 강의는 다음과 같습니다.
-		</p>
-		<ul>
-			<li><b>Lecture 1. </b> Course Introduction & Java Basics</li>
-			<li><b>Lecture 2. </b> Classes and Objects, Static, Types</li>
-		</ul>
-	
-  
+</footer>
+
         
         </div>
         
@@ -509,8 +586,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -524,6 +599,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -543,6 +619,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -708,8 +787,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/lecture1/" title="Lecture 1"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/lecture1/" title="Lecture 1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/lecture2/" title="Lecture 2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

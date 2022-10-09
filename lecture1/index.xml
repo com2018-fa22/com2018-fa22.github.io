@@ -7,5 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 29 Sep 2022 19:40:40 +0900</lastBuildDate><atom:link href="/lecture1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>/lecture1/hello_world/</link>
+      <pubDate>Fri, 30 Sep 2022 16:42:08 +0900</pubDate>
+      
+      <guid>/lecture1/hello_world/</guid>
+      <description>다양한 언어에서 Hello World를 콘솔 출력해봅시다.
+Python print(&amp;#34;Hello World&amp;#34;) C #include &amp;lt;stdio.h&amp;gt; int main(){ printf(&amp;#34;Hello World!\n&amp;#34;); return 0; } Python과 C의 차이점은 무엇일까요? 많은 차이가 있지만, 큰 맥락에서 이야기해봅시다.
+파이썬은 코드를 한 줄씩 실행하는 인터프리터 언어인 반면, C는 기계어로의 변환이 필요한 컴파일 언어입니다.
+따라서 컴파일러에게 코드의 시작을 알리기 위해 main이라는 함수를 두게 됩니다.
+Java를 통해 Hello World를 출력하기 위해서는 다음과 같은 코드를 사용합니다.
+public class Hello { public static void main(String[] args) { System.</description>
+    </item>
+    
   </channel>
 </rss>

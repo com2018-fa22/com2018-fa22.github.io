@@ -7,5 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 29 Sep 2022 19:30:40 +0900</lastBuildDate><atom:link href="/lecture2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Classes and Objects, Static, Types</title>
+      <link>/lecture2/content1/</link>
+      <pubDate>Wed, 05 Oct 2022 21:12:07 +0900</pubDate>
+      
+      <guid>/lecture2/content1/</guid>
+      <description>이번 노트에서는 다음과 같은 내용을 다룹니다.
+자바의 메소드 (Method) 자바 프로그램이 실행되기까지 (컴파일러, JVM) Class와 object static과 non-static (가벼운 차이만 다룹니다.) Methods in Java Classes 파이썬에서 두 변수의 크기를 비교하는 함수를 작성해보면 아래와 같습니다.
+def larger(a, b): return a &amp;gt; b print(larger(3, 2)) print(larger(1, 2)) print(larger(&amp;#34;google&amp;#34;, &amp;#34;apple&amp;#34;)) print(larger(&amp;#34;han&amp;#34;, &amp;#34;yang&amp;#34;)) # 결과 True False True False 만약 서로 자료형을 가진 두 변수를 전달하게 되면, 아래와 같은 오류가 발생합니다.
+두 input 매개변수의 자료형이 다르면 크기 비교를 할 수 없기 때문입니다.</description>
+    </item>
+    
   </channel>
 </rss>

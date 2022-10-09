@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lecture 6 on Documentation for Hugo Learn Theme</title>
+    <link>/lecture6/</link>
+    <description>Recent content in Lecture 6 on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 08 Jun 2022 20:10:26 +0900</lastBuildDate><atom:link href="/lecture6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 6</title>
+      <link>/lecture6/content1/</link>
+      <pubDate>Sun, 09 Oct 2022 09:54:50 +0900</pubDate>
+      
+      <guid>/lecture6/content1/</guid>
+      <description>앞선 SLList의 단점들을 하나씩 개선해 봅시다.
+size() 개선 기존 IntNode에서는 전체 List의 크기를 알아내기 위해 모든 List를 순회해야 했습니다. 이와 달리, SLList에서는 전체 List의 길이를 보관하는 별도의 member variable을 만듭니다. 이는 SLList의 초기 생성 시에는 1이 될 것이며, Node를 추가할 때마다 1씩 증가하게 됩니다. public class SLList { private IntNode first; private int size; public SLList() { first = null; size = 0; } public void addFirst(int x) { .</description>
+    </item>
+    
+  </channel>
+</rss>
