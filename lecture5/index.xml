@@ -8,15 +8,25 @@
     <language>en-US</language>
     <lastBuildDate>Fri, 08 Jul 2022 20:10:23 +0900</lastBuildDate><atom:link href="/lecture5/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Lecture 5</title>
+      <title>PARAMETER PASSING, LISTS, ARRAYS</title>
       <link>/lecture5/content1/</link>
       <pubDate>Sun, 09 Oct 2022 09:54:38 +0900</pubDate>
       
       <guid>/lecture5/content1/</guid>
-      <description>지난 시간, primitive type과 reference type에 대해서 배워보았습니다.
+      <description>PARAMETER PASSING Instantiation of Arrays Linked List in Java 지난 시간, primitive type과 reference type에 대해서 배워보았습니다.
 이번에는 이들이 method의 매개변수로 전달되는 과정을 살펴봅시다.
-아래 코드에서, walrus와 x중 어떠한 값이 변경되고 유지될까요?
-PollQuestions.java 실행결과 public class PollQuestions { public static void main(String[] args) { Walrus walrus = new Walrus(3500, 10.5); int x = 9; doStuff(walrus, x); System.out.println(walrus); System.out.println(x); } public static void doStuff(Walrus W, int x) { W.weight = W.weight - 100; x = x - 5; } ... weight: 3400, tusk size: 10.</description>
+퀴즈 - 아래 코드에서, walrus와 x중 어떠한 값이 변경되고 유지될까요?
+PollQuestions.java 실행결과 public class PollQuestions { public static void main(String[] args) { Walrus walrus = new Walrus(3500, 10.5); int x = 9; doStuff(walrus, x); System.out.println(walrus); System.out.println(x); } public static void doStuff(Walrus W, int x) { W.</description>
+    </item>
+    
+    <item>
+      <title>PUBLIC VS PRIVATE, Nested Classes</title>
+      <link>/lecture5/content2/</link>
+      <pubDate>Fri, 09 Sep 2022 11:46:32 +0900</pubDate>
+      
+      <guid>/lecture5/content2/</guid>
+      <description>Public vs. Private Nested Classes 현재의 SLList는 사용자가 first member에 직접 접근이 가능하기 때문에 아래와 같이 SLList의 순서를 마음대로 조작할 수 있게 됩니다.
+SLList L = new SLList(15); L.addFirst(10); L.first.next.next = L.first.next; 이러한 위험을 막기 위해, first member는 오로지 클래스 내부에서만 사용 가능하도록 private 키워드를 추가할 수 있습니다. private 키워드인 member를 클래스 밖에서 접근하려고 하면 컴파일 에러가 발생하기 때문에 실수를 방지할 수 있습니다. 사용자 측면에서도 클래스에 대해 필요한 부분만 사용하면 되기 때문에 complexity가 줄어들게 됩니다.</description>
     </item>
     
   </channel>

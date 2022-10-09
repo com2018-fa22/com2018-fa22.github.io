@@ -8,13 +8,23 @@
     <language>en-US</language>
     <lastBuildDate>Wed, 08 Jun 2022 20:10:26 +0900</lastBuildDate><atom:link href="/lecture6/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Lecture 6</title>
+      <title>SLList Upgrade, DLLs and Arrays</title>
       <link>/lecture6/content1/</link>
       <pubDate>Sun, 09 Oct 2022 09:54:50 +0900</pubDate>
       
       <guid>/lecture6/content1/</guid>
-      <description>앞선 SLList의 단점들을 하나씩 개선해 봅시다.
+      <description>SLList Upgrade DLLs and Arrays 앞선 SLList의 단점들을 하나씩 개선해 봅시다.
 size() 개선 기존 IntNode에서는 전체 List의 크기를 알아내기 위해 모든 List를 순회해야 했습니다. 이와 달리, SLList에서는 전체 List의 길이를 보관하는 별도의 member variable을 만듭니다. 이는 SLList의 초기 생성 시에는 1이 될 것이며, Node를 추가할 때마다 1씩 증가하게 됩니다. public class SLList { private IntNode first; private int size; public SLList() { first = null; size = 0; } public void addFirst(int x) { .</description>
+    </item>
+    
+    <item>
+      <title>Generic Lists, AList, 2D Arrays</title>
+      <link>/lecture6/content2/</link>
+      <pubDate>Fri, 09 Sep 2022 11:46:39 +0900</pubDate>
+      
+      <guid>/lecture6/content2/</guid>
+      <description>Generic Lists AList 2D Arrays Generic Lists 지금까지의 SLList, DLList는 모두 item에 int 타입의 데이터만 담을 수 있었습니다. String, double 등 모든 타입에 대해서 List가 동작하도록 하기 위해, class generic을 사용해 봅시다.
+class generic을 사용하기 위해서는 클래스의 정의 시 &amp;lt;&amp;gt; 연산자를 추가하고 generic의 지칭할 키워드를 명시합니다. 아래 예에서는 T를 키워드로 사용하고 있습니다. T는 어떤 이름으로 해도 무관합니다. 이제, 클래스 내부에서의 구현 시, generic이 적용되는 모든 부분에 실제 타입 대신 T를 써주면 됩니다.</description>
     </item>
     
   </channel>

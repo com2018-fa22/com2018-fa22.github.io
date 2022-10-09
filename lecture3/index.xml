@@ -8,14 +8,25 @@
     <language>en-US</language>
     <lastBuildDate>Sun, 07 Aug 2022 21:51:11 +0900</lastBuildDate><atom:link href="/lecture3/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Lecture 3</title>
+      <title>Class Defining, Instantiating, Array of Objects, Static vs Non-static</title>
       <link>/lecture3/content1/</link>
       <pubDate>Sat, 08 Oct 2022 20:09:49 +0900</pubDate>
       
       <guid>/lecture3/content1/</guid>
-      <description>Java 클래스의 Defining과 Instantiating static vs non-static 코드의 complexity를 관리하기 primitive type과 reference type, 매개 변수 전달 object instantiation 클래스에는 다양한 instance method, variable들이 존재합니다. 따라서, object의 생성 시, 이 member들을 초기화해주는 작업이 필요하며, 이를 object instantiation이라고 부릅니다.
+      <description>Java 클래스의 Defining과 Instantiating Arrays of Objects static vs non-static object instantiation 클래스에는 다양한 instance method, variable들이 존재합니다. 따라서, object의 생성 시, 이 member들을 초기화해주는 작업이 필요하며, 이를 object instantiation이라고 부릅니다.
 object instantiation을 하는 여러 방법이 있지만, 클래스 내부에서 constructor를 만들어줌으로 이를 수행할 수 있습니다.
 public class Dog { public int weightInPounds; /** One integer constructor for dogs. */ public Dog(int w) { weightInPounds = w; } public void makeNoise() { if (weightInPounds &amp;lt; 10) { System.</description>
+    </item>
+    
+    <item>
+      <title>Managing Complexity, Primitive vs. Reference Types, Parameter Passing</title>
+      <link>/lecture3/content2/</link>
+      <pubDate>Fri, 09 Sep 2022 11:46:19 +0900</pubDate>
+      
+      <guid>/lecture3/content2/</guid>
+      <description>코드의 complexity를 관리하기 primitive type과 reference type, 매개 변수 전달 Managing Complexity with Helper Methods 왜 자바에서는 모든 코드가 클래스안에 존재하며, static method를 사용하고 있을까요?
+코드의 complexity를 낮추고, 사용자의 실수를 방지할 수 있기 때문입니다. static method를 사용하면, 사용자, 혹은 다른 프로그래머가 가용한 option이 적어지며, 이는 오류의 option을 줄이게 됩니다. helper method 사용하는 모든 코드가 main 함수 안에 구현되어 있다고 생각해봅시다. 방대한 코드는 가독성을 떨어뜨릴 뿐더러, 실수를 유발합니다.
+이러한 문제를 해결하기 위해 우리는 helper method를 사용하여 코드를 분리하고 정리합니다.</description>
     </item>
     
   </channel>
