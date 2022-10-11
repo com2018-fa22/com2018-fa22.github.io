@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.1" />
+    <meta name="description" content="COM2018 OOP Class Lecture Note">
+<meta name="author" content="Soo Young Kim">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Unit Test &amp; Integration Test, Simpler JUnit Tests, Primtive Types - Documentation for Hugo Learn Theme</title>
+
+    
+    <link href="/css/nucleus.css?1665476503" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1665476503" rel="stylesheet">
+    <link href="/css/hybrid.css?1665476503" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1665476503" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1665476503" rel="stylesheet">
+    <link href="/css/auto-complete.css?1665476503" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1665476503" rel="stylesheet">
+    <link href="/css/theme.css?1665476503" rel="stylesheet">
+    <link href="/css/tabs.css?1665476503" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1665476503" rel="stylesheet">
+    
+    <link href="/css/theme-blue.css?1665476503" rel="stylesheet">
+    
+    <link href="/css/foo.css?1665476503" rel="stylesheet"><link href="/css/bar.css?1665476503" rel="stylesheet">
+
+    <script src="/js/jquery-3.3.1.min.js?1665476503"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/en/lecture4/content2/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      
+<img width="1097" alt="image" src="https://user-images.githubusercontent.com/12381733/193000270-b9514c3e-3590-41e7-9209-7de6c08066c1.png">
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1665476503"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1665476503"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/en";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1665476503"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/en'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/en/lecture1/" title="Lecture 1" class="dd-item
+        
+        
+        
+        ">
+      <a href="/en/lecture1/">
+          <b> </b>Lecture 1
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture1/hello_world/" title="Hello World" class="dd-item ">
+        <a href="/en/lecture1/hello_world/">
+        Hello World
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/en/lecture2/" title="Lecture 2" class="dd-item
+        
+        
+        
+        ">
+      <a href="/en/lecture2/">
+          <b> </b>Lecture 2
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture2/content1/" title="Classes and Objects, Static, Types" class="dd-item ">
+        <a href="/en/lecture2/content1/">
+        Classes and Objects, Static, Types
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/en/lecture3/" title="Lecture 3" class="dd-item
+        
+        
+        
+        ">
+      <a href="/en/lecture3/">
+          <b> </b>Lecture 3
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture3/content1/" title="Class Defining, Instantiating, Array of Objects, Static vs Non-static" class="dd-item ">
+        <a href="/en/lecture3/content1/">
+        Class Defining, Instantiating, Array of Objects, Static vs Non-static
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture3/content2/" title="Managing Complexity (Helper Method)" class="dd-item ">
+        <a href="/en/lecture3/content2/">
+        Managing Complexity (Helper Method)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/en/lecture4/" title="Lecture 4" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/en/lecture4/">
+          <b> </b>Lecture 4
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture4/content1/" title="Selection Sort, A Simple JUnit test, Testing Philosophy" class="dd-item ">
+        <a href="/en/lecture4/content1/">
+        Selection Sort, A Simple JUnit test, Testing Philosophy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture4/content2/" title="Unit Test &amp; Integration Test, Simpler JUnit Tests, Primtive Types" class="dd-item active">
+        <a href="/en/lecture4/content2/">
+        Unit Test &amp; Integration Test, Simpler JUnit Tests, Primtive Types
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/en/lecture5/" title="Lecture 5" class="dd-item
+        
+        
+        
+        ">
+      <a href="/en/lecture5/">
+          <b> </b>Lecture 5
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture5/content1/" title="PARAMETER PASSING, LISTS, ARRAYS" class="dd-item ">
+        <a href="/en/lecture5/content1/">
+        PARAMETER PASSING, LISTS, ARRAYS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture5/content2/" title="PUBLIC VS PRIVATE, Nested Classes" class="dd-item ">
+        <a href="/en/lecture5/content2/">
+        PUBLIC VS PRIVATE, Nested Classes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/en/lecture6/" title="Lecture 6" class="dd-item
+        
+        
+        
+        ">
+      <a href="/en/lecture6/">
+          <b> </b>Lecture 6
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture6/content1/" title="SLList Upgrade, DLLs and Arrays" class="dd-item ">
+        <a href="/en/lecture6/content1/">
+        SLList Upgrade, DLLs and Arrays
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture6/content2/" title="Generic Lists, AList, 2D Arrays" class="dd-item ">
+        <a href="/en/lecture6/content2/">
+        Generic Lists, AList, 2D Arrays
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-fw fa-github'></i> Repo GitHub</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://hokeun.github.io/"><i class='fas fa-fw fa-bookmark'></i> About our Instructor</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://sp21.datastructur.es/"><i class='fas fa-fw fa-bullhorn'></i> CS 61B Spring 2021</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="kr" value="/kr/lecture4/content2/">Korean</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="en" value="/en/lecture4/content2/" selected>English</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://github.com/kimsooyoung">SwimmingKim</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/com2018-fa22/hugo-blog/tree/main/content/lecture4/content2.en.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                   Unit Test &amp; Integration Test, Simpler JUnit Tests, Primtive Types
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#unit-test--integration-test">Unit Test &amp; Integration Test</a></li>
+    <li><a href="#integration-test"><strong>Integration Test</strong></a></li>
+    <li><a href="#primtive-types">Primtive Types</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Unit Test &amp; Integration Test, Simpler JUnit Tests, Primtive Types
+            </h1>
+          
+
+        
+
+
+<ul>
+<li>Unit Test &amp; Integration Test</li>
+<li>Simpler JUnit Tests</li>
+<li>Primtive Types</li>
+</ul>
+<h2 id="unit-test--integration-test">Unit Test &amp; Integration Test</h2>
+<p>방대한 코드는 수많은 하위 기능들의 조합으로 구성되며, 이러한 작은 하위 기능의 단위를 Unit이라고 칭할 때, 이 Unit들을 Testing하는 작업을 <strong>Unit Test</strong>라고 합니다.</p>
+<p>JUnit은 이런 Unit Test를 편리하게 작업할 수 있도록 해주는 Java의 툴입니다.</p>
+<p><strong>Test-Driven Development (TDD)</strong></p>
+<ul>
+<li>일전 예시와 같이 구현하고자 하는 기능의 Test code를 먼저 작성하고, 그 test code에 맞추어 코드를 개발하는 과정을 TDD라고 합니다.</li>
+<li>구현한 코드가 모든 Test를 통과하게 된다면 Refactoring을 수행하며, 다시 새로운 기능의 Test Code를 작성함으로 과정을 반복하면서, 차츰 차츰 거대한 프로젝트를 구성해나갈 수 있습니다.</li>
+</ul>
+<p><img src="/lecture4/images/lec4_3.png" alt="img3"></p>
+<ul>
+<li><em>출처 : <a href="https://medium.com/pplink/tdd%EB%A1%9C-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C-%EB%82%A0%EB%A1%9C-%EB%A8%B9%EA%B8%B0-a95e428d929">https://medium.com/pplink/tdd로-프론트엔드-개발-날로-먹기-a95e428d929</a></em></li>
+</ul>
+<h2 id="integration-test"><strong>Integration Test</strong></h2>
+<p>Unit Test를 모두 통과했다 하더라도, 코드 전체의 동작이 제대로 수행되는 것은 별개의 테스트가 필요합니다. 이렇게 좀 더 큰 범위의 코드들을 테스트하고 개선하는 것을 <strong>Integration test</strong>라고 합니다.</p>
+<p>테스트 시스템을 탄탄하게 다져두면, 이후의 개발 시 높은 효율을 얻을 수 있습니다.</p>
+<p><img src="/lecture4/images/lec4_4.png" alt="img4"></p>
+<ul>
+<li><em>출처 : <a href="https://www.exasol.com/resource/integration-testing-why-you-need-it-and-how-to-make-it-painless/">https://www.exasol.com/resource/integration-testing-why-you-need-it-and-how-to-make-it-painless/</a></em></li>
+</ul>
+<hr>
+<h2 id="primtive-types">Primtive Types</h2>
+<p>Java에는 8가지의 primitive type이 존재하며, 이를 제외한 모든 type들은 모두 reference type이 됩니다.</p>
+<p><img src="/lecture4/images/lec4_5.png" alt="img5"></p>
+<ul>
+<li><em>출처 : <a href="https://www.geeksforgeeks.org/data-types-in-java/">https://www.geeksforgeeks.org/data-types-in-java/</a></em></li>
+</ul>
+
+<div class="notices note" ><p>퀴즈 - 아래 예시에서, b의 변경이 a에 영향이 있을까요?</p>
+</div>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Walrus a <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Walrus<span style="color:#f92672">(</span>1000<span style="color:#f92672">,</span> 8<span style="color:#f92672">.</span><span style="color:#a6e22e">3</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>Walrus b<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> a<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>b<span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span> <span style="color:#f92672">=</span> 5<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>a<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>b<span style="color:#f92672">);</span>
+</span></span></code></pre></div><p>코드를 통해 확인해 봅시다.</p>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="WalrusQuiz.java"
+          data-tab-group="default"
+          class="tab-nav-button btn active"
+          onclick="switchTab('default','WalrusQuiz.java')"
+         >WalrusQuiz.java</button>
+    
+        <button
+          data-tab-item="실행 결과"
+          data-tab-group="default"
+          class="tab-nav-button btn "
+          onclick="switchTab('default','실행 결과')"
+         >실행 결과</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="WalrusQuiz.java" data-tab-group="default" class="tab-item active">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WalrusQuiz</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Walrus</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> weight <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">double</span> tusk <span style="color:#f92672">=</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Walrus</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> weight<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> tusk<span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span> <span style="color:#f92672">=</span> weight<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">tusk</span> <span style="color:#f92672">=</span> tusk<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;weight : &#34;</span> <span style="color:#f92672">+</span> weight <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;  / tush : &#34;</span> <span style="color:#f92672">+</span> tusk<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        Walrus a <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Walrus<span style="color:#f92672">(</span>1000<span style="color:#f92672">,</span> 8<span style="color:#f92672">.</span><span style="color:#a6e22e">3</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        Walrus b<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        b <span style="color:#f92672">=</span> a<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        b<span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span> <span style="color:#f92672">=</span> 5<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>a<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>b<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+        </div>
+        
+        <div data-tab-item="실행 결과" data-tab-group="default" class="tab-item ">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>weight <span style="color:#f92672">:</span> 5  <span style="color:#f92672">/</span> tush <span style="color:#f92672">:</span> 8<span style="color:#f92672">.</span><span style="color:#a6e22e">3</span>
+</span></span><span style="display:flex;"><span>weight <span style="color:#f92672">:</span> 5  <span style="color:#f92672">/</span> tush <span style="color:#f92672">:</span> 8<span style="color:#f92672">.</span><span style="color:#a6e22e">3</span>
+</span></span></code></pre></div>
+        </div>
+        
+    </div>
+</div>
+
+<ul>
+<li>Walrus 클래스는 <em>reference type</em> 이기 때문에, b의 변경이 a에게도 영향을 미치게 됩니다.</li>
+</ul>
+
+<div class="notices note" ><p>만약 weight가 클래스의 static member였다면 위 예시는 어떻게 동작했을까요?</p>
+</div>
+
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="WalrusQuiz.java"
+          data-tab-group="default"
+          class="tab-nav-button btn active"
+          onclick="switchTab('default','WalrusQuiz.java')"
+         >WalrusQuiz.java</button>
+    
+        <button
+          data-tab-item="실행 결과"
+          data-tab-group="default"
+          class="tab-nav-button btn "
+          onclick="switchTab('default','실행 결과')"
+         >실행 결과</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="WalrusQuiz.java" data-tab-group="default" class="tab-item active">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WalrusQuiz</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Walrus</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> weight <span style="color:#f92672">=</span> 1000<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">double</span> tusk <span style="color:#f92672">=</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        Walrus a <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Walrus<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        Walrus b <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Walrus<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a.weight : &#34;</span> <span style="color:#f92672">+</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\t b.weight : &#34;</span> <span style="color:#f92672">+</span> b<span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        Walrus<span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span> <span style="color:#f92672">=</span> 10<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a.weight : &#34;</span> <span style="color:#f92672">+</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\t b.weight : &#34;</span> <span style="color:#f92672">+</span> b<span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+        </div>
+        
+        <div data-tab-item="실행 결과" data-tab-group="default" class="tab-item ">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>a<span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span> <span style="color:#f92672">:</span> 1000	   b<span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span> <span style="color:#f92672">:</span> 1000
+</span></span><span style="display:flex;"><span>a<span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span> <span style="color:#f92672">:</span> 10	   b<span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span> <span style="color:#f92672">:</span> 10
+</span></span></code></pre></div>
+        </div>
+        
+    </div>
+</div>
+
+<ul>
+<li>static member를 변경하게 되면 해당 클래스의 모든 object들의 static member 값이 변경됩니다.</li>
+<li>만약 이러한 변경을 막고 싶다면, 클래스 내에서 <code>final</code> 키워드를 사용하면 됩니다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WalrusQuiz</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Walrus</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> weight <span style="color:#f92672">=</span> 1000<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">double</span> tusk <span style="color:#f92672">=</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        Walrus a <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Walrus<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        Walrus b <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Walrus<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a.weight : &#34;</span> <span style="color:#f92672">+</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\t b.weight : &#34;</span> <span style="color:#f92672">+</span> b<span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        Walrus<span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span> <span style="color:#f92672">=</span> 10<span style="color:#f92672">;</span> <span style="color:#75715e">// 컴파일 에러
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a.weight : &#34;</span> <span style="color:#f92672">+</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\t b.weight : &#34;</span> <span style="color:#f92672">+</span> b<span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+<div class="notices note" ><p>앞선 Walrus 퀴즈 결과와 비교하면서, 아래 예시를 실행하면 x의 변화가 y의 값에 영향을 줄지 생각해 봅시다.</p>
+</div>
+
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="PrimitiveQuiz.java"
+          data-tab-group="default"
+          class="tab-nav-button btn active"
+          onclick="switchTab('default','PrimitiveQuiz.java')"
+         >PrimitiveQuiz.java</button>
+    
+        <button
+          data-tab-item="실행결과"
+          data-tab-group="default"
+          class="tab-nav-button btn "
+          onclick="switchTab('default','실행결과')"
+         >실행결과</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="PrimitiveQuiz.java" data-tab-group="default" class="tab-item active">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PrimitiveQuiz</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> 5<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> y<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        y <span style="color:#f92672">=</span> x<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> 2<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x is &#34;</span> <span style="color:#f92672">+</span> x<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;y is &#34;</span> <span style="color:#f92672">+</span> y<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+        </div>
+        
+        <div data-tab-item="실행결과" data-tab-group="default" class="tab-item ">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>x is 2
+</span></span><span style="display:flex;"><span>y is 5
+</span></span></code></pre></div>
+        </div>
+        
+    </div>
+</div>
+
+<ul>
+<li>이러한 차이를 갖는 이유는 int는 primitive type인 반면, Walrus는 reference type이기 때문입니다.</li>
+<li>앞서 언급한 바와 같이 Java에는 8가지의 primitive type이 있으며, 이를 제외한 나머지 type은 모두 reference type이 됩니다.</li>
+</ul>
+<hr>
+<p>primitive type 변수를 declaration하게 되면, 해당 변수에 일정 크기의 <strong>빈 메모리 box</strong>가 할당됩니다.</p>
+<p><img src="/lecture4/images/lec4_6.png" alt="img6"></p>
+<ul>
+<li><em>출처 : <a href="https://sp21.datastructur.es/">https://sp21.datastructur.es/</a></em></li>
+</ul>
+<p>변수에 값을 대입하게 되면 메모리 box에 실제 값이 들어가게 되는 것이지요. (이러한 개념을 <strong>box notation</strong>이라고 부르겠습니다.)</p>
+<p><img src="/lecture4/images/lec4_7.png" alt="img7"></p>
+<ul>
+<li>box notation에서 <em>y = x</em>라는 대입은 x box에 있던 모든 비트를 y 박스의 비트로 복사하겠다는 뜻이 됩니다.</li>
+<li>반면, reference type 변수를 declaration하고 assignment하는 방식은 primitive type과 큰 차이가 있습니다.</li>
+<li>아래 예시를 통해 reference type의 declaration과 assignment를 살펴봅시다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PollQuestions</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      Walrus a <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Walrus<span style="color:#f92672">(</span>1000<span style="color:#f92672">,</span> 8<span style="color:#f92672">.</span><span style="color:#a6e22e">3</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Walrus</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> weight<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> tuskSize<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Walrus</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> w<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> ts<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>         weight <span style="color:#f92672">=</span> w<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>         tuskSize <span style="color:#f92672">=</span> ts<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>reference type 변수를 declaration하면, 해당 변수에는 아무 값을 갖지 않는 pointer가 할당됩니다.</li>
+</ul>
+<p><img src="/lecture4/images/lec4_8.png" alt="img8"></p>
+<ul>
+<li>declaration된 변수를 instantiation하면, 이 시점에 a는 <code>weight</code>와 <code>tuskSize</code>를 가진 object를 가리키게 (point) 됩니다.</li>
+<li>a 자체는 값을 가진 것이 아니라, a가 가리키는 곳으로 가야 실제 값이 존재하는 것이지요.</li>
+</ul>
+<p><img src="/lecture4/images/lec4_9.png" alt="img9"></p>
+<ul>
+<li>reference type간의 복사는 실제 값이 복사되는 것이 아니라, 두 pointer가 같은 값을 가리키게 되는 식으로 동작합니다.</li>
+<li>때문에, a의 member를 변경할 시 b에도 영향을 미치게 됩니다.</li>
+</ul>
+<p><img src="/lecture4/images/lec4_10.png" alt="img10"></p>
+<p>강의에서는 이러한 개념을 <strong>“box and pointer”</strong> notation이라고 칭하고 있습니다.</p>
+
+<div class="notices note" ><p>일전, String object의 비교 시 == 연산자를 사용할 수 없었던 점을 다시 생각해봅시다.</p>
+</div>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>String a <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>String b <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>a <span style="color:#f92672">==</span> b<span style="color:#f92672">)</span> <span style="color:#75715e">// Nope :(
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>a<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>b<span style="color:#f92672">))</span> <span style="color:#75715e">// Yes :)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">...</span>
+</span></span></code></pre></div><ul>
+<li>서로 다른 reference type을 비교한다는 것은 해당 reference type 즉, pointer를 비교하는 것에 지나지 않습니다. 실제 우리가 원하는 비교는 해당 pointer가 가리키고 있는 실제 존재하는 값을 비교하고 싶은 것입니다.</li>
+<li>a는 분명 b와 같은 값을 갖고 있는데, <em>==</em> 연산자로는 둘이 같은지 구분할 수가 없습니다. <em>==</em> 연산자는 단순히 c와 a 자체 즉, pointer를 비교하고 있기 때문입니다.</li>
+</ul>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/en/lecture4/content1/" title="Selection Sort, A Simple JUnit test, Testing Philosophy"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/en/lecture5/" title="Lecture 5" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1665476503"></script>
+    <script src="/js/perfect-scrollbar.min.js?1665476503"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1665476503"></script>
+    <script src="/js/jquery.sticky.js?1665476503"></script>
+    <script src="/js/featherlight.min.js?1665476503"></script>
+    <script src="/js/highlight.pack.js?1665476503"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1665476503"></script>
+    <script src="/js/learn.js?1665476503"></script>
+    <script src="/js/hugo-learn.js?1665476503"></script>
+    
+        
+            <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

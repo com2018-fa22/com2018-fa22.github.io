@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>한양대학교 융합전자공학부 OOP 정리노트 on Documentation for Hugo Learn Theme</title>
+    <link>/kr/</link>
+    <description>Recent content in 한양대학교 융합전자공학부 OOP 정리노트 on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 09 Oct 2022 09:54:50 +0900</lastBuildDate><atom:link href="/kr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SLList Upgrade, DLLs and Arrays</title>
+      <link>/kr/lecture6/content1/</link>
+      <pubDate>Sun, 09 Oct 2022 09:54:50 +0900</pubDate>
+      
+      <guid>/kr/lecture6/content1/</guid>
+      <description>SLList Upgrade DLLs and Arrays 앞선 SLList의 단점들을 하나씩 개선해 봅시다.
+size() 개선 기존 IntNode에서는 전체 List의 크기를 알아내기 위해 모든 List를 순회해야 했습니다. 이와 달리, SLList에서는 전체 List의 길이를 보관하는 별도의 member variable을 만듭니다. 이는 SLList의 초기 생성 시에는 1이 될 것이며, Node를 추가할 때마다 1씩 증가하게 됩니다. public class SLList { private IntNode first; private int size; public SLList() { first = null; size = 0; } public void addFirst(int x) { .</description>
+    </item>
+    
+    <item>
+      <title>PARAMETER PASSING, LISTS, ARRAYS</title>
+      <link>/kr/lecture5/content1/</link>
+      <pubDate>Sun, 09 Oct 2022 09:54:38 +0900</pubDate>
+      
+      <guid>/kr/lecture5/content1/</guid>
+      <description>PARAMETER PASSING Instantiation of Arrays Linked List in Java 지난 시간, primitive type과 reference type에 대해서 배워보았습니다.
+이번에는 이들이 method의 매개변수로 전달되는 과정을 살펴봅시다.
+퀴즈 - 아래 코드에서, walrus와 x중 어떠한 값이 변경되고 유지될까요?
+PollQuestions.java 실행결과 public class PollQuestions { public static void main(String[] args) { Walrus walrus = new Walrus(3500, 10.5); int x = 9; doStuff(walrus, x); System.out.println(walrus); System.out.println(x); } public static void doStuff(Walrus W, int x) { W.</description>
+    </item>
+    
+    <item>
+      <title>Selection Sort, A Simple JUnit test, Testing Philosophy</title>
+      <link>/kr/lecture4/content1/</link>
+      <pubDate>Sat, 08 Oct 2022 20:09:52 +0900</pubDate>
+      
+      <guid>/kr/lecture4/content1/</guid>
+      <description>Selection Sort A Simple JUnit test Testing Philosophy 내가 작성하는 모든 코드가 완벽하리라 보장할 수는 없을 것입니다. 이를 위해 다양한 test 코드를 만들고 이를 통해 잘못된 로직을 수정하는 방식을 사용하여 코드의 안정성을 높일 수 있습니다.
+Selection Sort 구현 String array가 주어졌을 때, 알파벳 순으로 정렬된 array를 반환하는 sort 코드를 작성해봅시다.
+예를 들어, {”i”, “am”, ”a”, “student”}라는 array는 {”a”, “am”, “i”, “student”}가 될 것입니다. sort method를 구현하기 전, 테스트 코드를 작성해봅시다.</description>
+    </item>
+    
+    <item>
+      <title>Class Defining, Instantiating, Array of Objects, Static vs Non-static</title>
+      <link>/kr/lecture3/content1/</link>
+      <pubDate>Sat, 08 Oct 2022 20:09:49 +0900</pubDate>
+      
+      <guid>/kr/lecture3/content1/</guid>
+      <description>Java 클래스의 Defining과 Instantiating Arrays of Objects static vs non-static object instantiation 클래스에는 다양한 instance method, variable들이 존재합니다. 따라서, object의 생성 시, 이 member들을 초기화해주는 작업이 필요하며, 이를 object instantiation이라고 부릅니다.
+object instantiation을 하는 여러 방법이 있지만, 클래스 내부에서 constructor를 만들어줌으로 이를 수행할 수 있습니다.
+public class Dog { public int weightInPounds; /** One integer constructor for dogs. */ public Dog(int w) { weightInPounds = w; } public void makeNoise() { if (weightInPounds &amp;lt; 10) { System.</description>
+    </item>
+    
+    <item>
+      <title>Classes and Objects, Static, Types</title>
+      <link>/kr/lecture2/content1/</link>
+      <pubDate>Wed, 05 Oct 2022 21:12:07 +0900</pubDate>
+      
+      <guid>/kr/lecture2/content1/</guid>
+      <description>이번 노트에서는 다음과 같은 내용을 다룹니다.
+자바의 메소드 (Method) 자바 프로그램이 실행되기까지 (컴파일러, JVM) Class와 object static과 non-static Methods in Java Classes 파이썬에서 두 변수의 크기를 비교하는 함수를 작성해보면 아래와 같습니다. def larger(a, b): return a &amp;gt; b print(larger(3, 2)) print(larger(1, 2)) print(larger(&amp;#34;google&amp;#34;, &amp;#34;apple&amp;#34;)) print(larger(&amp;#34;han&amp;#34;, &amp;#34;yang&amp;#34;)) # 결과 True False True False 만약 서로 자료형을 가진 두 변수를 전달하게 되면, 아래와 같은 오류가 발생합니다. 두 input 매개변수의 자료형이 다르면 크기 비교를 할 수 없기 때문입니다.</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>/kr/lecture1/hello_world/</link>
+      <pubDate>Fri, 30 Sep 2022 16:42:08 +0900</pubDate>
+      
+      <guid>/kr/lecture1/hello_world/</guid>
+      <description>다양한 언어에서 Hello World를 콘솔 출력해봅시다.
+Python print(&amp;#34;Hello World&amp;#34;) C #include &amp;lt;stdio.h&amp;gt; int main(){ printf(&amp;#34;Hello World!\n&amp;#34;); return 0; } Python과 C의 차이점은 무엇일까요? 많은 차이가 있지만, 큰 맥락에서 이야기해봅시다.
+파이썬은 코드를 한 줄씩 실행하는 인터프리터 언어인 반면, C는 기계어로의 변환이 필요한 컴파일 언어입니다.
+따라서 컴파일러에게 코드의 시작을 알리기 위해 main이라는 함수를 두게 됩니다.
+Java를 통해 Hello World를 출력하기 위해서는 다음과 같은 코드를 사용합니다.
+public class Hello { public static void main(String[] args) { System.</description>
+    </item>
+    
+    <item>
+      <title>Generic Lists, AList, 2D Arrays</title>
+      <link>/kr/lecture6/content2/</link>
+      <pubDate>Fri, 09 Sep 2022 11:46:39 +0900</pubDate>
+      
+      <guid>/kr/lecture6/content2/</guid>
+      <description>Generic Lists AList 2D Arrays Generic Lists 지금까지의 SLList, DLList는 모두 item에 int 타입의 데이터만 담을 수 있었습니다. String, double 등 모든 타입에 대해서 List가 동작하도록 하기 위해, class generic을 사용해 봅시다.
+class generic을 사용하기 위해서는 클래스의 정의 시 &amp;lt;&amp;gt; 연산자를 추가하고 generic의 지칭할 키워드를 명시합니다. 아래 예에서는 T를 키워드로 사용하고 있습니다. T는 어떤 이름으로 해도 무관합니다. 이제, 클래스 내부에서의 구현 시, generic이 적용되는 모든 부분에 실제 타입 대신 T를 써주면 됩니다.</description>
+    </item>
+    
+    <item>
+      <title>PUBLIC VS PRIVATE, Nested Classes</title>
+      <link>/kr/lecture5/content2/</link>
+      <pubDate>Fri, 09 Sep 2022 11:46:32 +0900</pubDate>
+      
+      <guid>/kr/lecture5/content2/</guid>
+      <description>Public vs. Private Nested Classes 현재의 SLList는 사용자가 first member에 직접 접근이 가능하기 때문에 아래와 같이 SLList의 순서를 마음대로 조작할 수 있게 됩니다.
+SLList L = new SLList(15); L.addFirst(10); L.first.next.next = L.first.next; 이러한 위험을 막기 위해, first member는 오로지 클래스 내부에서만 사용 가능하도록 private 키워드를 추가할 수 있습니다. private 키워드인 member를 클래스 밖에서 접근하려고 하면 컴파일 에러가 발생하기 때문에 실수를 방지할 수 있습니다. 사용자 측면에서도 클래스에 대해 필요한 부분만 사용하면 되기 때문에 complexity가 줄어들게 됩니다.</description>
+    </item>
+    
+    <item>
+      <title>Unit Test &amp; Integration Test, Simpler JUnit Tests, Primtive Types</title>
+      <link>/kr/lecture4/content2/</link>
+      <pubDate>Fri, 09 Sep 2022 11:46:27 +0900</pubDate>
+      
+      <guid>/kr/lecture4/content2/</guid>
+      <description>Unit Test &amp;amp; Integration Test Simpler JUnit Tests Primtive Types Unit Test &amp;amp; Integration Test 방대한 코드는 수많은 하위 기능들의 조합으로 구성되며, 이러한 작은 하위 기능의 단위를 Unit이라고 칭할 때, 이 Unit들을 Testing하는 작업을 Unit Test라고 합니다.
+JUnit은 이런 Unit Test를 편리하게 작업할 수 있도록 해주는 Java의 툴입니다.
+Test-Driven Development (TDD)
+일전 예시와 같이 구현하고자 하는 기능의 Test code를 먼저 작성하고, 그 test code에 맞추어 코드를 개발하는 과정을 TDD라고 합니다.</description>
+    </item>
+    
+    <item>
+      <title>Managing Complexity (Helper Method)</title>
+      <link>/kr/lecture3/content2/</link>
+      <pubDate>Fri, 09 Sep 2022 11:46:19 +0900</pubDate>
+      
+      <guid>/kr/lecture3/content2/</guid>
+      <description>코드의 complexity를 관리하기 (helper method) Managing Complexity with Helper Methods 왜 자바에서는 모든 코드가 클래스안에 존재하며, static method를 사용하고 있을까요?
+코드의 complexity를 낮추고, 사용자의 실수를 방지할 수 있기 때문입니다. static method를 사용하면, 사용자, 혹은 다른 프로그래머가 가용한 option이 적어지며, 이는 오류의 option을 줄이게 됩니다. helper method 사용하는 모든 코드가 main 함수 안에 구현되어 있다고 생각해봅시다. 방대한 코드는 가독성을 떨어뜨릴 뿐더러, 실수를 유발합니다.
+이러한 문제를 해결하기 위해 우리는 helper method를 사용하여 코드를 분리하고 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

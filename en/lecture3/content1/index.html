@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.1" />
+    <meta name="description" content="COM2018 OOP Class Lecture Note">
+<meta name="author" content="Soo Young Kim">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Class Defining, Instantiating, Array of Objects, Static vs Non-static - Documentation for Hugo Learn Theme</title>
+
+    
+    <link href="/css/nucleus.css?1665476503" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1665476503" rel="stylesheet">
+    <link href="/css/hybrid.css?1665476503" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1665476503" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1665476503" rel="stylesheet">
+    <link href="/css/auto-complete.css?1665476503" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1665476503" rel="stylesheet">
+    <link href="/css/theme.css?1665476503" rel="stylesheet">
+    <link href="/css/tabs.css?1665476503" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1665476503" rel="stylesheet">
+    
+    <link href="/css/theme-blue.css?1665476503" rel="stylesheet">
+    
+    <link href="/css/foo.css?1665476503" rel="stylesheet"><link href="/css/bar.css?1665476503" rel="stylesheet">
+
+    <script src="/js/jquery-3.3.1.min.js?1665476503"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/en/lecture3/content1/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      
+<img width="1097" alt="image" src="https://user-images.githubusercontent.com/12381733/193000270-b9514c3e-3590-41e7-9209-7de6c08066c1.png">
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1665476503"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1665476503"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/en";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1665476503"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/en'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/en/lecture1/" title="Lecture 1" class="dd-item
+        
+        
+        
+        ">
+      <a href="/en/lecture1/">
+          <b> </b>Lecture 1
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture1/hello_world/" title="Hello World" class="dd-item ">
+        <a href="/en/lecture1/hello_world/">
+        Hello World
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/en/lecture2/" title="Lecture 2" class="dd-item
+        
+        
+        
+        ">
+      <a href="/en/lecture2/">
+          <b> </b>Lecture 2
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture2/content1/" title="Classes and Objects, Static, Types" class="dd-item ">
+        <a href="/en/lecture2/content1/">
+        Classes and Objects, Static, Types
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/en/lecture3/" title="Lecture 3" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/en/lecture3/">
+          <b> </b>Lecture 3
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture3/content1/" title="Class Defining, Instantiating, Array of Objects, Static vs Non-static" class="dd-item active">
+        <a href="/en/lecture3/content1/">
+        Class Defining, Instantiating, Array of Objects, Static vs Non-static
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture3/content2/" title="Managing Complexity (Helper Method)" class="dd-item ">
+        <a href="/en/lecture3/content2/">
+        Managing Complexity (Helper Method)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/en/lecture4/" title="Lecture 4" class="dd-item
+        
+        
+        
+        ">
+      <a href="/en/lecture4/">
+          <b> </b>Lecture 4
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture4/content1/" title="Selection Sort, A Simple JUnit test, Testing Philosophy" class="dd-item ">
+        <a href="/en/lecture4/content1/">
+        Selection Sort, A Simple JUnit test, Testing Philosophy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture4/content2/" title="Unit Test &amp; Integration Test, Simpler JUnit Tests, Primtive Types" class="dd-item ">
+        <a href="/en/lecture4/content2/">
+        Unit Test &amp; Integration Test, Simpler JUnit Tests, Primtive Types
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/en/lecture5/" title="Lecture 5" class="dd-item
+        
+        
+        
+        ">
+      <a href="/en/lecture5/">
+          <b> </b>Lecture 5
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture5/content1/" title="PARAMETER PASSING, LISTS, ARRAYS" class="dd-item ">
+        <a href="/en/lecture5/content1/">
+        PARAMETER PASSING, LISTS, ARRAYS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture5/content2/" title="PUBLIC VS PRIVATE, Nested Classes" class="dd-item ">
+        <a href="/en/lecture5/content2/">
+        PUBLIC VS PRIVATE, Nested Classes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/en/lecture6/" title="Lecture 6" class="dd-item
+        
+        
+        
+        ">
+      <a href="/en/lecture6/">
+          <b> </b>Lecture 6
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture6/content1/" title="SLList Upgrade, DLLs and Arrays" class="dd-item ">
+        <a href="/en/lecture6/content1/">
+        SLList Upgrade, DLLs and Arrays
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/en/lecture6/content2/" title="Generic Lists, AList, 2D Arrays" class="dd-item ">
+        <a href="/en/lecture6/content2/">
+        Generic Lists, AList, 2D Arrays
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-fw fa-github'></i> Repo GitHub</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://hokeun.github.io/"><i class='fas fa-fw fa-bookmark'></i> About our Instructor</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://sp21.datastructur.es/"><i class='fas fa-fw fa-bullhorn'></i> CS 61B Spring 2021</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="kr" value="/kr/lecture3/content1/">Korean</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="en" value="/en/lecture3/content1/" selected>English</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://github.com/kimsooyoung">SwimmingKim</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/com2018-fa22/hugo-blog/tree/main/content/lecture3/content1.en.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                   Class Defining, Instantiating, Array of Objects, Static vs Non-static
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#object-instantiation">object instantiation</a></li>
+    <li><a href="#arrays-of-objects">Arrays of Objects</a></li>
+    <li><a href="#static-vs-non-static">Static vs. Non-static</a></li>
+    <li><a href="#static-members">Static Members</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Class Defining, Instantiating, Array of Objects, Static vs Non-static
+            </h1>
+          
+
+        
+
+
+<ul>
+<li>Java 클래스의 Defining과 Instantiating</li>
+<li>Arrays of Objects</li>
+<li>static vs non-static</li>
+</ul>
+<h2 id="object-instantiation">object instantiation</h2>
+<p>클래스에는 다양한 instance method, variable들이 존재합니다. 따라서, object의 생성 시, 이 member들을 초기화해주는 작업이 필요하며, 이를 <code>object instantiation</code>이라고 부릅니다.</p>
+<p>object instantiation을 하는 여러 방법이 있지만, 클래스 내부에서 <strong>constructor</strong>를 만들어줌으로 이를 수행할 수 있습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> weightInPounds<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">/** One integer constructor for dogs. */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Dog</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> w<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		weightInPounds <span style="color:#f92672">=</span> w<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">makeNoise</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>weightInPounds <span style="color:#f92672">&lt;</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;yip!&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>weightInPounds <span style="color:#f92672">&lt;</span> 30<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;bark.&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;woooof!&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p><strong>constructor의 특징</strong></p>
+<ul>
+<li>리턴 타입이 없고, 클래스와 같은 이름을 갖는 method입니다.</li>
+<li>object가 new 키워드를 통해 생성될 때 실행됩니다.</li>
+<li>그 밖의 함수들은 static, 혹은 non-static method가 됩니다.</li>
+</ul>
+<blockquote>
+<p>일전 살펴본 Dog 클래스를 main에서 사용해봅시다. 코드 주석으로 declaration, instantiation, assignment에 대한 설명이 추가되어 있습니다.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DogLauncher</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>	Dog smallDog<span style="color:#f92672">;</span> <span style="color:#75715e">// declaration: 메모리에 Dog 변수를 할당
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">new</span> Dog<span style="color:#f92672">(</span>20<span style="color:#f92672">);</span> <span style="color:#75715e">// Dog 클래스를 Dog object로 instantiation
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    smallDog <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog<span style="color:#f92672">(</span>5<span style="color:#f92672">);</span> <span style="color:#75715e">// assignment : instantiation된 object를 변수에게 할당
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    Dog hugeDog <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog<span style="color:#f92672">(</span>150<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    smallDog<span style="color:#f92672">.</span><span style="color:#a6e22e">makeNoise</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    hugeDog<span style="color:#f92672">.</span><span style="color:#a6e22e">makeNoise</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>위 코드 <code>new Dog(20);</code>의 경우, instantiation는 되지만 해당 assignment가 되지 않아, 이 dog은 실제로는 사용할 수 없으므로 사라지게 됩니다.</li>
+<li>더불어, <code>Dog hugeDog = new Dog(150);</code>의 경우, declaration instantiation assignment가 한 줄에서 모두 실행되는 형태를 갖습니다.</li>
+</ul>
+
+<div class="notices note" ><p>그렇다면, declaration과 assignment를 동시에 실행하는 것과 분리하는 것의 차이는 무엇일까요?</p>
+</div>
+
+<blockquote>
+<p>배가 고프다면 맛있는 식당으로, 그렇지 않다면 평범한 식당으로 가는 로직을 구현해 봅시다.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GoogleMaps</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        Restaurant m <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Restaurant<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;McDonald&#39;s&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        m<span style="color:#f92672">.</span><span style="color:#a6e22e">rating</span> <span style="color:#f92672">=</span> 3<span style="color:#f92672">.</span><span style="color:#a6e22e">9</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        m<span style="color:#f92672">.</span><span style="color:#a6e22e">isDineInAllowed</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Restaurant w <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Restaurant<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Wangsibli&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        w<span style="color:#f92672">.</span><span style="color:#a6e22e">rating</span> <span style="color:#f92672">=</span> 5<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        w<span style="color:#f92672">.</span><span style="color:#a6e22e">isDineInAllowed</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">boolean</span> hungry <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>hungry<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            Restaurant r <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Restaurant<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;HangWonPark&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            Restaurant r <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Restaurant<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;ShinSoJae&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>r<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>위 코드에서 r은 <code>if{ }</code>문 안에서 생성되었으므로, 괄호를 벗어나게 되면 사라지게 됩니다. 때문에, <code>System.out.println(r.name);</code>는 실행될 수 없습니다. (이를 변수의 <strong>스코프</strong> 라고 부릅니다.)</p>
+<ul>
+<li>declaration과 assignment를 분리하면 우리가 원하던 기능을 구현할 수 있고, 유연한 프로그래밍이 가능해집니다.</li>
+<li>더불어, declaration과 instantiation을 한 라인에 작성하므로 코드의 양을 줄일 수 있고, 실수도 줄일 수 있습니다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>        <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">boolean</span> hungry <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        Restaurant r<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>hungry<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            r <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Restaurant<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;HangWonPark&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            r <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Restaurant<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;ShinSoJae&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>r<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><hr>
+<h2 id="arrays-of-objects">Arrays of Objects</h2>
+<p>자바에서는 <strong>array 또한 object</strong>입니다. 따라서 array도 instantiation을 필요로 합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Dog<span style="color:#f92672">[]</span> dogs <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog<span style="color:#f92672">[</span>2<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>dogs<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog<span style="color:#f92672">(</span>8<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>dogs<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog<span style="color:#f92672">(</span>20<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>dogs<span style="color:#f92672">[</span>0<span style="color:#f92672">].</span><span style="color:#a6e22e">makeNoise</span><span style="color:#f92672">();</span>
+</span></span></code></pre></div><p>위 예시에서는 object의 array를 생성하고 있으므로, array의 각 object들 또한 instantiation을 필요로 합니다.</p>
+
+<div class="notices note" ><p>만약 Dog의 Constructor에 console output을 추가한 뒤 Dog array를 declaration하면 어떤 결과를 얻을까요?</p>
+</div>
+
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="Dog.java"
+          data-tab-group="default"
+          class="tab-nav-button btn active"
+          onclick="switchTab('default','Dog.java')"
+         >Dog.java</button>
+    
+        <button
+          data-tab-item="DogLauncher.java"
+          data-tab-group="default"
+          class="tab-nav-button btn "
+          onclick="switchTab('default','DogLauncher.java')"
+         >DogLauncher.java</button>
+    
+        <button
+          data-tab-item="실행 결과"
+          data-tab-group="default"
+          class="tab-nav-button btn "
+          onclick="switchTab('default','실행 결과')"
+         >실행 결과</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="Dog.java" data-tab-group="default" class="tab-item active">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> weightInPounds<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String binomen <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Canis familiaris&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">/** One integer constructor for dogs. */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Dog</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> w<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		weightInPounds <span style="color:#f92672">=</span> w<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;New Dog created!!&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">makeNoise</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>weightInPounds <span style="color:#f92672">&lt;</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;yip!&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>weightInPounds <span style="color:#f92672">&lt;</span> 30<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;bark.&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;woooof!&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+        </div>
+        
+        <div data-tab-item="DogLauncher.java" data-tab-group="default" class="tab-item ">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DogLauncher</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		Dog<span style="color:#f92672">[]</span> dogs <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog<span style="color:#f92672">[</span>10<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>		dogs<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog<span style="color:#f92672">(</span>100<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+        </div>
+        
+        <div data-tab-item="실행 결과" data-tab-group="default" class="tab-item ">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>New Dog created!!
+</span></span></code></pre></div>
+        </div>
+        
+    </div>
+</div>
+
+<p>Dog array를 declaration하는 시점이 아닌 <strong>Dog object를 declaration하는 시점에서 constructor가 실행</strong>됩니다.</p>
+<hr>
+<h2 id="static-vs-non-static">Static vs. Non-static</h2>
+<p><strong>statics method</strong>는 declare된 object가 없어도 클래스 이름을 통해 호출할 수 있습니다. 반면 static method에서 사용되는 모든 변수들은 동일하게 static이어야 합니다.</p>
+<p>예를 들어, makeNoise method를 static으로 변경하면 오류가 발생합니다. makeNoise에서 사용하고 있는 <code>weightInPounds</code>이 static이 아니기 때문입니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>  <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">makeNoise</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>weightInPounds <span style="color:#f92672">&lt;</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;yip!&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>weightInPounds <span style="color:#f92672">&lt;</span> 30<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;bark.&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;woooof!&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+<div class="notices note" ><p>이렇게 까다로운 static method를 쓰는 이유는 왜일까요??</p>
+</div>
+
+<p>Math라는 클래스 내의 <code>round</code>라는 method를 사용하고 싶은 경우, round가 static method라면 굳이 Math의 object를 declare하지 않더라도 사용할 수 있을 것 입니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">round</span><span style="color:#f92672">(</span>5<span style="color:#f92672">.</span><span style="color:#a6e22e">6</span><span style="color:#f92672">);</span>
+</span></span></code></pre></div><blockquote>
+<p>대신 round method 내에서 사용되는 모든 변수는 static이어야 할 것입니다.</p>
+</blockquote>
+<ul>
+<li>static method에서 non-static member를 사용하기 위해서는 아래와 같은 방법이 가능합니다.</li>
+</ul>
+<p>Dog 클래스에서 직접적으로 <code>weightInPounds</code> member에 접근할 수 없기 때문에, 별도의 <code>maxDog</code>이라는 static method를 만들고, Dog 타입의 매개변수를 받아 해당 method 안에서 <code>weightInPounds</code>에 접근하고 있습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Dog <span style="color:#a6e22e">maxDog</span><span style="color:#f92672">(</span>Dog d1<span style="color:#f92672">,</span> Dog d2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>d1<span style="color:#f92672">.</span><span style="color:#a6e22e">weightInPounds</span> <span style="color:#f92672">&gt;</span> d2<span style="color:#f92672">.</span><span style="color:#a6e22e">weightInPounds</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> d1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> d2<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><hr>
+<h2 id="static-members">Static Members</h2>
+<ul>
+<li>static member variable은 static method에서 사용될 수 있습니다.</li>
+<li>static member variable은 static method처럼 클래스 이름을 통해 접근이 가능합니다.</li>
+</ul>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="Dog.java"
+          data-tab-group="default"
+          class="tab-nav-button btn active"
+          onclick="switchTab('default','Dog.java')"
+         >Dog.java</button>
+    
+        <button
+          data-tab-item="DogLauncher.java"
+          data-tab-group="default"
+          class="tab-nav-button btn "
+          onclick="switchTab('default','DogLauncher.java')"
+         >DogLauncher.java</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="Dog.java" data-tab-group="default" class="tab-item active">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> weightInPounds<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String binomen <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Canis familiaris&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>
+</span></span></code></pre></div>
+        </div>
+        
+        <div data-tab-item="DogLauncher.java" data-tab-group="default" class="tab-item ">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DogLauncher</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>Dog<span style="color:#f92672">.</span><span style="color:#a6e22e">binomen</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+        </div>
+        
+    </div>
+</div>
+
+
+<div class="notices note" ><p>Quiz - 아래 코드는 컴파일이 될까요? (<a href="http://goo.gl/HLzN6s">java visualizer link</a>)</p>
+</div>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DogLoop</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      Dog smallDog <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog<span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>      Dog mediumDog <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog<span style="color:#f92672">(</span>25<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>      Dog hugeDog <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog<span style="color:#f92672">(</span>150<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      Dog<span style="color:#f92672">[]</span> manyDogs <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog<span style="color:#f92672">[</span>4<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>      manyDogs<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> smallDog<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>      manyDogs<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> hugeDog<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>      manyDogs<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog<span style="color:#f92672">(</span>130<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span> manyDogs<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>         Dog<span style="color:#f92672">.</span><span style="color:#a6e22e">maxDog</span><span style="color:#f92672">(</span>manyDogs<span style="color:#f92672">[</span>i<span style="color:#f92672">],</span> mediumDog<span style="color:#f92672">).</span><span style="color:#a6e22e">makeNoise</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>         i <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
+<p>Yes! manyDogs의 4번째 element가 없음에도 컴파일은 가능합니다.</p>
+</blockquote>
+<p>하지만, 코드를 실행할 시, Dog[3]에 도달하는 순간 <code>null.weightInPounds</code>에 접근하게 되며 <strong>NullPointerException</strong> 에러가 발생합니다.</p>
+
+<div class="notices note" ><p>아래와 같이 아무 매개변수 없이 object를 instantiation하면 어떻게 될까요?</p>
+</div>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DogLauncher</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		Dog my_dog <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">...</span>
+</span></span></code></pre></div><ul>
+<li>Java 에서는 위의 Dog class와 같이 constructor가 하나라도 정의되어있는 경우 default constructor가 제공되지 않습니다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> weightInPounds<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String binomen <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Canis familiaris&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Dog</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		weightInPounds <span style="color:#f92672">=</span> 10<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">...</span>
+</span></span></code></pre></div><ul>
+<li>constructor가 하나도 정의되어 있지 않은 경우 실행되는 &ldquo;일종의&rdquo; default constructor는 클래스의 instantiation과 관련하여 아무런 작업을 하지 않습니다.</li>
+</ul>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="DogLauncher.java"
+          data-tab-group="default"
+          class="tab-nav-button btn active"
+          onclick="switchTab('default','DogLauncher.java')"
+         >DogLauncher.java</button>
+    
+        <button
+          data-tab-item="실행 결과"
+          data-tab-group="default"
+          class="tab-nav-button btn "
+          onclick="switchTab('default','실행 결과')"
+         >실행 결과</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="DogLauncher.java" data-tab-group="default" class="tab-item active">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DogLauncher</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DogTest</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> weightInPounds<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String binomen <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Canis familiaris&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		DogTest my_dog <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DogTest<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>my_dog<span style="color:#f92672">.</span><span style="color:#a6e22e">weightInPounds</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+        </div>
+        
+        <div data-tab-item="실행 결과" data-tab-group="default" class="tab-item ">
+            <pre tabindex="0"><code>0
+</code></pre>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/en/lecture3/" title="Lecture 3"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/en/lecture3/content2/" title="Managing Complexity (Helper Method)" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1665476503"></script>
+    <script src="/js/perfect-scrollbar.min.js?1665476503"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1665476503"></script>
+    <script src="/js/jquery.sticky.js?1665476503"></script>
+    <script src="/js/featherlight.min.js?1665476503"></script>
+    <script src="/js/highlight.pack.js?1665476503"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1665476503"></script>
+    <script src="/js/learn.js?1665476503"></script>
+    <script src="/js/hugo-learn.js?1665476503"></script>
+    
+        
+            <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

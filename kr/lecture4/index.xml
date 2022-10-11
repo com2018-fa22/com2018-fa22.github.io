@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lecture 4 on Documentation for Hugo Learn Theme</title>
+    <link>/kr/lecture4/</link>
+    <description>Recent content in Lecture 4 on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 05 Aug 2022 21:51:23 +0900</lastBuildDate><atom:link href="/kr/lecture4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Selection Sort, A Simple JUnit test, Testing Philosophy</title>
+      <link>/kr/lecture4/content1/</link>
+      <pubDate>Sat, 08 Oct 2022 20:09:52 +0900</pubDate>
+      
+      <guid>/kr/lecture4/content1/</guid>
+      <description>Selection Sort A Simple JUnit test Testing Philosophy 내가 작성하는 모든 코드가 완벽하리라 보장할 수는 없을 것입니다. 이를 위해 다양한 test 코드를 만들고 이를 통해 잘못된 로직을 수정하는 방식을 사용하여 코드의 안정성을 높일 수 있습니다.
+Selection Sort 구현 String array가 주어졌을 때, 알파벳 순으로 정렬된 array를 반환하는 sort 코드를 작성해봅시다.
+예를 들어, {”i”, “am”, ”a”, “student”}라는 array는 {”a”, “am”, “i”, “student”}가 될 것입니다. sort method를 구현하기 전, 테스트 코드를 작성해봅시다.</description>
+    </item>
+    
+    <item>
+      <title>Unit Test &amp; Integration Test, Simpler JUnit Tests, Primtive Types</title>
+      <link>/kr/lecture4/content2/</link>
+      <pubDate>Fri, 09 Sep 2022 11:46:27 +0900</pubDate>
+      
+      <guid>/kr/lecture4/content2/</guid>
+      <description>Unit Test &amp;amp; Integration Test Simpler JUnit Tests Primtive Types Unit Test &amp;amp; Integration Test 방대한 코드는 수많은 하위 기능들의 조합으로 구성되며, 이러한 작은 하위 기능의 단위를 Unit이라고 칭할 때, 이 Unit들을 Testing하는 작업을 Unit Test라고 합니다.
+JUnit은 이런 Unit Test를 편리하게 작업할 수 있도록 해주는 Java의 툴입니다.
+Test-Driven Development (TDD)
+일전 예시와 같이 구현하고자 하는 기능의 Test code를 먼저 작성하고, 그 test code에 맞추어 코드를 개발하는 과정을 TDD라고 합니다.</description>
+    </item>
+    
+  </channel>
+</rss>
