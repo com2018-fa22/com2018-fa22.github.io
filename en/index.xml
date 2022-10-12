@@ -67,12 +67,10 @@ public class Dog { public int weightInPounds; /** One integer constructor for do
       <pubDate>Fri, 30 Sep 2022 16:42:08 +0900</pubDate>
       
       <guid>/en/lecture1/hello_world/</guid>
-      <description>다양한 언어에서 Hello World를 콘솔 출력해봅시다.
-Python print(&amp;#34;Hello World&amp;#34;) C #include &amp;lt;stdio.h&amp;gt; int main(){ printf(&amp;#34;Hello World!\n&amp;#34;); return 0; } Python과 C의 차이점은 무엇일까요? 많은 차이가 있지만, 큰 맥락에서 이야기해봅시다.
-파이썬은 코드를 한 줄씩 실행하는 인터프리터 언어인 반면, C는 기계어로의 변환이 필요한 컴파일 언어입니다.
-따라서 컴파일러에게 코드의 시작을 알리기 위해 main이라는 함수를 두게 됩니다.
-Java를 통해 Hello World를 출력하기 위해서는 다음과 같은 코드를 사용합니다.
-public class Hello { public static void main(String[] args) { System.</description>
+      <description>Write &amp;ldquo;Hello World&amp;rdquo; in various programming language.
+Python print(&amp;#34;Hello World&amp;#34;) C #include &amp;lt;stdio.h&amp;gt; int main(){ printf(&amp;#34;Hello World!\n&amp;#34;); return 0; } Difference between Python &amp;amp; C Although, there&amp;rsquo;s lots of difference, let&amp;rsquo;s begin with major stuff.
+Python is an interpreted language, which runs codes line by line. However, C is a compiled language, which means it transforms codes into machine language.
+Therefore, main function is required in order to inform the start of codes into the compiler.</description>
     </item>
     
     <item>
