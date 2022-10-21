@@ -80,6 +80,28 @@
                 href="/kr/lecture6/"
                 />
   </url><url>
+    <loc>/kr/lecture7/</loc>
+    <lastmod>2022-05-21T16:52:29+09:00</lastmod>
+  </url><url>
+    <loc>/kr/lecture7/content1/</loc>
+    <lastmod>2022-10-21T16:53:41+09:00</lastmod>
+  </url><url>
+    <loc>/kr/</loc>
+    <lastmod>2022-10-21T16:53:41+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="kr"
+                href="/kr/"
+                />
+  </url><url>
+    <loc>/kr/lecture7/content2/</loc>
+    <lastmod>2022-10-21T12:41:27+09:00</lastmod>
+  </url><url>
     <loc>/kr/lecture6/content1/</loc>
     <lastmod>2022-10-09T09:54:50+09:00</lastmod>
     <xhtml:link
@@ -91,19 +113,6 @@
                 rel="alternate"
                 hreflang="kr"
                 href="/kr/lecture6/content1/"
-                />
-  </url><url>
-    <loc>/kr/</loc>
-    <lastmod>2022-10-09T09:54:50+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="kr"
-                href="/kr/"
                 />
   </url><url>
     <loc>/kr/lecture5/content1/</loc>

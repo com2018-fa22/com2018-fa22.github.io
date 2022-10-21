@@ -14,7 +14,8 @@
       
       <guid>/en/lecture1/hello_world/</guid>
       <description>Write &amp;ldquo;Hello World&amp;rdquo; in various programming language.
-Python print(&amp;#34;Hello World&amp;#34;) C #include &amp;lt;stdio.h&amp;gt; int main(){ printf(&amp;#34;Hello World!\n&amp;#34;); return 0; } Difference between Python &amp;amp; C Although, there&amp;rsquo;s lots of difference, let&amp;rsquo;s begin with major stuff.
+Python print(&amp;#34;Hello World&amp;#34;) C
+#include &amp;lt;stdio.h&amp;gt; int main(){ printf(&amp;#34;Hello World!\n&amp;#34;); return 0; } Difference between Python &amp;amp; C Although, there&amp;rsquo;s lots of difference, let&amp;rsquo;s begin with major stuff.
 Python is an interpreted language, which runs codes line by line. However, C is a compiled language, which means it transforms codes into machine language.
 Therefore, main function is required in order to inform the start of codes into the compiler.</description>
     </item>

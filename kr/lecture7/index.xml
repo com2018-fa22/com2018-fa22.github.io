@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lecture 7 on Documentation for Hugo Learn Theme</title>
+    <link>/kr/lecture7/</link>
+    <description>Recent content in Lecture 7 on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 21 May 2022 16:52:29 +0900</lastBuildDate><atom:link href="/kr/lecture7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Memory Efficiency, Obscurantism, Inheritance, Interface</title>
+      <link>/kr/lecture7/content1/</link>
+      <pubDate>Fri, 21 Oct 2022 16:53:41 +0900</pubDate>
+      
+      <guid>/kr/lecture7/content1/</guid>
+      <description>AList를 통해 배우는 Inheritance와 Interface array를 통해 구현되는 AList에 대한 구현을 계속해봅시다. 현재의 AList는 새로운 item이 계속해서 추가됨에 따라 최대 List 크기를 넘어가게 되면 resize 작업이 요구됩니다. private void resize(int capacity) { int[] a = new int[capacity]; System.arraycopy(items, 0, a, 0, size); items = a; } public void addLast(int x) { if (size == items.length) { resize(size + 100); } items[size] = x; size = size + 1; } 이 작업의 수행 시</description>
+    </item>
+    
+    <item>
+      <title>Overriding vs Overloading</title>
+      <link>/kr/lecture7/content2/</link>
+      <pubDate>Fri, 21 Oct 2022 12:41:27 +0900</pubDate>
+      
+      <guid>/kr/lecture7/content2/</guid>
+      <description>inheritance와 interface를 통해 코드를 간소화할 수 있다는 것을 알게 되었습니다.
+AList와 SList의 코드를 다시 살펴보면, 대부분의 메소드가 중복되고 있음을 발견할 수 있는데요, 상속을 통해 이러한 중복을 제거할 수 있을 것입니다.
+AList SLList public class AList&amp;lt;Item&amp;gt;{ public AList() public void insert(Item x, int position) public void addFirst(Item x) public void addLast(Item i) public Item getFirst() public Item getLast() public Item get(int i) public int size() public Item removeLast() } public class SList&amp;lt;Item&amp;gt;{ public SLList() public SLList(Item x) public void insert(Item item, int position) public void addFirst(Item x) public void addLast(Item x) public Item getFirst() public Item getLast() public Item get(int i) public int size() public Item removeLast() } 하지만, 상황에 따라, 불가피하게 input parameter가 달라져야 하는 경우가 있습니다.</description>
+    </item>
+    
+  </channel>
+</rss>
