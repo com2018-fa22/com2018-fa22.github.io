@@ -82,6 +82,16 @@
   </url><url>
     <loc>/kr/lecture7/</loc>
     <lastmod>2022-05-21T16:52:29+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/lecture7/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="kr"
+                href="/kr/lecture7/"
+                />
   </url><url>
     <loc>/kr/lecture7/content1/</loc>
     <lastmod>2022-10-21T16:53:41+09:00</lastmod>

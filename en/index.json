@@ -42,11 +42,18 @@
 	"content": "Lecture 6 SLList Upgrade, DLLs and Arrays Generic Lists, AList, 2D Arrays "
 },
 {
+	"uri": "/en/lecture7/",
+	"title": "Lecture 7",
+	"tags": [],
+	"description": "",
+	"content": "Lecture 7 Memory Efficiency, Obscurantism, Inheritance, Interface Overriding vs Overloading "
+},
+{
 	"uri": "/en/",
 	"title": "COM2018-FA22 Lecture Note",
 	"tags": [],
 	"description": "",
-	"content": "Hanyang University OOP Class Lecture Note This site is made for \u0026ldquo;COM2018: Object-Oriented Programming\u0026rdquo; class in order to organize codes from lectures.\nCurrently Organized Lectures\u0026hellip;\nLecture 1. Course Introduction \u0026amp; Java Basics Lecture 2. Classes and Objects, Static, Types Lecture 3. Defining \u0026amp; Instantiating, Static vs Non-static, Managing - Complexity, Primitive Types Lecture 4. Unit Testing Lecture 5. Linked List (IntList \u0026amp; SLList), PUBLIC VS PRIVATE, Nested Classes, List \u0026amp; Array Lecture 6. Doubly Linked List, Generic Lists, AList Ongoing \u0026hellip; "
+	"content": "Hanyang University OOP Class Lecture Note This site is made for \u0026ldquo;COM2018: Object-Oriented Programming\u0026rdquo; class in order to organize codes from lectures.\nCurrently Organized Lectures\u0026hellip;\nLecture 1. Course Introduction \u0026amp; Java Basics Lecture 2. Classes and Objects, Static, Types Lecture 3. Defining \u0026amp; Instantiating, Static vs Non-static, Managing - Complexity, Primitive Types Lecture 4. Unit Testing Lecture 5. Linked List (IntList \u0026amp; SLList), PUBLIC VS PRIVATE, Nested Classes, List \u0026amp; Array Lecture 6. Doubly Linked List, Generic Lists, AList Lecture 7. Inheritance and Interface, Overriding and Overloading Ongoing \u0026hellip; "
 },
 {
 	"uri": "/en/lecture6/content1/",
