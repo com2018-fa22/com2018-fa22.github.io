@@ -6,7 +6,19 @@
     <description>Recent content in 한양대학교 융합전자공학부 OOP 정리노트 on Documentation for Hugo Learn Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 19 Dec 2022 16:52:30 +0900</lastBuildDate><atom:link href="/kr/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Dec 2022 20:50:05 +0900</lastBuildDate><atom:link href="/kr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DeepEquals, Vargs, Main Method</title>
+      <link>/kr/lecture9/content1/</link>
+      <pubDate>Mon, 19 Dec 2022 20:50:05 +0900</pubDate>
+      
+      <guid>/kr/lecture9/content1/</guid>
+      <description>equals() &amp;amp; deepEquals() 지난 시간 배운 내용을 살짝 복습 해보겠습니다.
+Reference Type의 비교 시 == 연산자는 단순히 메모리 박스의 주소만을 비교하는 것이기 때문에 의미가 없다는 것을 배웠습니다.
+Set&amp;lt;Integer&amp;gt; javaset = Set.of(5, 23, 42); Set&amp;lt;Integer&amp;gt; javaset2 = Set.of(5, 23, 42); System.out.println(javaset == javaset2); 실행 결과 : False 모든 클래스들의 Super Class인 Object 클래스에 구현된 equals() 메소드는 내부적으로 단순히 == 를 사용합니다. 그래서 equals() 메소드를 오버라이딩하여 사용했지요.
+출처 : Object.java 공식 github 2차원 배열, Object의 배열과 같은 다계층의 배열 비교 시, Array.</description>
+    </item>
+    
     <item>
       <title>java.util.List, Set in Java, Array Set 구현</title>
       <link>/kr/lecture8/content1/</link>

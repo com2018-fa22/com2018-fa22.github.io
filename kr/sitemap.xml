@@ -96,11 +96,14 @@
     <loc>/kr/lecture8/</loc>
     <lastmod>2022-04-19T16:51:44+09:00</lastmod>
   </url><url>
-    <loc>/kr/lecture8/content1/</loc>
-    <lastmod>2022-12-19T16:52:30+09:00</lastmod>
+    <loc>/kr/lecture9/</loc>
+    <lastmod>2022-03-19T20:49:42+09:00</lastmod>
+  </url><url>
+    <loc>/kr/lecture9/content1/</loc>
+    <lastmod>2022-12-19T20:50:05+09:00</lastmod>
   </url><url>
     <loc>/kr/</loc>
-    <lastmod>2022-12-19T16:52:30+09:00</lastmod>
+    <lastmod>2022-12-19T20:50:05+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -111,6 +114,9 @@
                 hreflang="kr"
                 href="/kr/"
                 />
+  </url><url>
+    <loc>/kr/lecture8/content1/</loc>
+    <lastmod>2022-12-19T16:52:30+09:00</lastmod>
   </url><url>
     <loc>/kr/lecture8/content2/</loc>
     <lastmod>2022-12-18T10:08:46+09:00</lastmod>

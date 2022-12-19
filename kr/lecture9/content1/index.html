@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="kr" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.1" />
+    <meta name="description" content="COM2018 OOP Class Lecture Note">
+<meta name="author" content="Soo Young Kim">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>DeepEquals, Vargs, Main Method - Documentation for Hugo Learn Theme</title>
+
+    
+    <link href="/css/nucleus.css?1671451627" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1671451627" rel="stylesheet">
+    <link href="/css/hybrid.css?1671451627" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1671451627" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1671451627" rel="stylesheet">
+    <link href="/css/auto-complete.css?1671451627" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1671451627" rel="stylesheet">
+    <link href="/css/theme.css?1671451627" rel="stylesheet">
+    <link href="/css/tabs.css?1671451627" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1671451627" rel="stylesheet">
+    
+    <link href="/css/theme-blue.css?1671451627" rel="stylesheet">
+    
+    <link href="/css/foo.css?1671451627" rel="stylesheet"><link href="/css/bar.css?1671451627" rel="stylesheet">
+
+    <script src="/js/jquery-3.3.1.min.js?1671451627"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/kr/lecture9/content1/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      
+<img width="1097" alt="image" src="https://user-images.githubusercontent.com/12381733/193000270-b9514c3e-3590-41e7-9209-7de6c08066c1.png">
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1671451627"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1671451627"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/kr";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1671451627"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/kr'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture1/" title="Lecture 1" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture1/">
+          <b> </b>Lecture 1
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture1/hello_world/" title="Hello World" class="dd-item ">
+        <a href="/kr/lecture1/hello_world/">
+        Hello World
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture2/" title="Lecture 2" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture2/">
+          <b> </b>Lecture 2
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture2/content1/" title="Classes and Objects, Static, Types" class="dd-item ">
+        <a href="/kr/lecture2/content1/">
+        Classes and Objects, Static, Types
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture3/" title="Lecture 3" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture3/">
+          <b> </b>Lecture 3
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture3/content1/" title="Class Defining, Instantiating, Array of Objects, Static vs Non-static" class="dd-item ">
+        <a href="/kr/lecture3/content1/">
+        Class Defining, Instantiating, Array of Objects, Static vs Non-static
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture3/content2/" title="Managing Complexity (Helper Method)" class="dd-item ">
+        <a href="/kr/lecture3/content2/">
+        Managing Complexity (Helper Method)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture4/" title="Lecture 4" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture4/">
+          <b> </b>Lecture 4
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture4/content1/" title="Selection Sort, A Simple JUnit test, Testing Philosophy" class="dd-item ">
+        <a href="/kr/lecture4/content1/">
+        Selection Sort, A Simple JUnit test, Testing Philosophy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture4/content2/" title="Unit Test &amp; Integration Test, Simpler JUnit Tests, Primtive Types" class="dd-item ">
+        <a href="/kr/lecture4/content2/">
+        Unit Test &amp; Integration Test, Simpler JUnit Tests, Primtive Types
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture5/" title="Lecture 5" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture5/">
+          <b> </b>Lecture 5
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture5/content1/" title="PARAMETER PASSING, LISTS, ARRAYS" class="dd-item ">
+        <a href="/kr/lecture5/content1/">
+        PARAMETER PASSING, LISTS, ARRAYS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture5/content2/" title="PUBLIC VS PRIVATE, Nested Classes" class="dd-item ">
+        <a href="/kr/lecture5/content2/">
+        PUBLIC VS PRIVATE, Nested Classes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture6/" title="Lecture 6" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture6/">
+          <b> </b>Lecture 6
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture6/content1/" title="SLList Upgrade, DLLs and Arrays" class="dd-item ">
+        <a href="/kr/lecture6/content1/">
+        SLList Upgrade, DLLs and Arrays
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture6/content2/" title="Generic Lists, AList, 2D Arrays" class="dd-item ">
+        <a href="/kr/lecture6/content2/">
+        Generic Lists, AList, 2D Arrays
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture7/" title="Lecture 7" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture7/">
+          <b> </b>Lecture 7
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture7/content1/" title="Memory Efficiency, Obscurantism, Inheritance, Interface" class="dd-item ">
+        <a href="/kr/lecture7/content1/">
+        Memory Efficiency, Obscurantism, Inheritance, Interface
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture7/content2/" title="Overriding vs Overloading" class="dd-item ">
+        <a href="/kr/lecture7/content2/">
+        Overriding vs Overloading
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture8/" title="Lecture 8" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture8/">
+          <b> </b>Lecture 8
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture8/content1/" title="java.util.List, Set in Java, Array Set 구현" class="dd-item ">
+        <a href="/kr/lecture8/content1/">
+        java.util.List, Set in Java, Array Set 구현
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture8/content2/" title="Exception, Iteration, toString, StringBuilder, equals" class="dd-item ">
+        <a href="/kr/lecture8/content2/">
+        Exception, Iteration, toString, StringBuilder, equals
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture9/" title="Lecture 9" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/kr/lecture9/">
+          <b> </b>Lecture 9
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture9/content1/" title="DeepEquals, Vargs, Main Method" class="dd-item active">
+        <a href="/kr/lecture9/content1/">
+        DeepEquals, Vargs, Main Method
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://github.com/com2018-fa22/hugo-blog"><i class='fab fa-fw fa-github'></i> GitHub repo</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://hokeun.github.io/"><i class='fas fa-fw fa-bookmark'></i> About our Instructor</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://sp21.datastructur.es/"><i class='fas fa-fw fa-bullhorn'></i> CS 61B Spring 2021</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="kr" value="/kr/lecture9/content1/" selected>Korean</option>
+                    
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://github.com/kimsooyoung">SwimmingKim</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/com2018-fa22/hugo-blog/tree/main/content/lecture9/content1.kr.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                   DeepEquals, Vargs, Main Method
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#equals--deepequals">equals() &amp; deepEquals()</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              DeepEquals, Vargs, Main Method
+            </h1>
+          
+
+        
+
+
+<h3 id="equals--deepequals">equals() &amp; deepEquals()</h3>
+<blockquote>
+<p>지난 시간 배운 내용을 살짝 복습 해보겠습니다.</p>
+</blockquote>
+<p>Reference Type의 비교 시 <strong>==</strong> 연산자는 단순히 메모리 박스의 주소만을 비교하는 것이기 때문에 의미가 없다는 것을 배웠습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Set<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> javaset <span style="color:#f92672">=</span> Set<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> 23<span style="color:#f92672">,</span> 42<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>Set<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> javaset2 <span style="color:#f92672">=</span> Set<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> 23<span style="color:#f92672">,</span> 42<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>javaset <span style="color:#f92672">==</span> javaset2<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>실행 결과 <span style="color:#f92672">:</span> False
+</span></span></code></pre></div><p>모든 클래스들의 Super Class인 <code>Object</code> 클래스에 구현된 equals() 메소드는 내부적으로 단순히 == 를 사용합니다. 그래서 equals() 메소드를 오버라이딩하여 사용했지요.</p>
+<p><img src="/kr/lecture9/images/lec9_0.png" alt="img0"></p>
+<ul>
+<li>출처 : <a href="https://github.com/openjdk-mirror/jdk7u-jdk/blob/master/src/share/classes/java/lang/Object.java">Object.java 공식 github</a></li>
+</ul>
+<p>2차원 배열, Object의 배열과 같은 다계층의 배열 비교 시, Array.equals()라는 메소드를 사용할 수 있습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">[]</span> <span style="color:#f92672">{</span>1<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> 4<span style="color:#f92672">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">[]</span> <span style="color:#f92672">{</span>1<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> 4<span style="color:#f92672">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">[]</span> <span style="color:#f92672">{</span>1<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> 4<span style="color:#f92672">,</span> 3<span style="color:#f92672">};</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is arr1 equals to arr2 : &#34;</span> <span style="color:#f92672">+</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>arr1<span style="color:#f92672">,</span> arr2<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is arr1 equals to arr3 : &#34;</span> <span style="color:#f92672">+</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>arr1<span style="color:#f92672">,</span> arr3<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>실행 결과
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">---</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>String<span style="color:#f92672">[]</span> str1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">[</span>3<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>str1<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>str1<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>str1<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>String<span style="color:#f92672">[]</span> str2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">[</span>3<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>str2<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>str2<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>str2<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>str1<span style="color:#f92672">,</span> str2<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>실행 결과
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">false</span>
+</span></span></code></pre></div><p>더불어, Java는 2차원 배열의 비교를 이를 위해 <code>Arrays.deepEquals()</code>라는 메소드도 제공합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> arr2d_1 <span style="color:#f92672">=</span> <span style="color:#f92672">{{</span>0<span style="color:#f92672">,</span> 1<span style="color:#f92672">},</span> <span style="color:#f92672">{</span>1<span style="color:#f92672">,</span> 0<span style="color:#f92672">}};</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> arr2d_2 <span style="color:#f92672">=</span> <span style="color:#f92672">{{</span>0<span style="color:#f92672">,</span> 1<span style="color:#f92672">},</span> <span style="color:#f92672">{</span>1<span style="color:#f92672">,</span> 0<span style="color:#f92672">}};</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is arr1 equals to arr2 : &#34;</span> <span style="color:#f92672">+</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>arr2d_1<span style="color:#f92672">,</span> arr2d_2<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>실행 결과
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">false</span>
+</span></span></code></pre></div>
+<div class="notices tip" ><p>참고로, deepEquals()는 3차원 이상의 배열도 비교할 수 있답니다.</p>
+</div>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is arr1 deepequals to arr2 : &#34;</span> <span style="color:#f92672">+</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">deepEquals</span><span style="color:#f92672">(</span>arr2d_1<span style="color:#f92672">,</span> arr2d_2<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[][][]</span> arr3d_1 <span style="color:#f92672">=</span> <span style="color:#f92672">{{</span> <span style="color:#f92672">{</span>0<span style="color:#f92672">,</span> 1<span style="color:#f92672">},</span> <span style="color:#f92672">{</span>1<span style="color:#f92672">,</span> 0<span style="color:#f92672">}},</span> <span style="color:#f92672">{</span> <span style="color:#f92672">{</span>0<span style="color:#f92672">,</span> 2<span style="color:#f92672">},</span> <span style="color:#f92672">{</span>2<span style="color:#f92672">,</span> 0<span style="color:#f92672">}</span> <span style="color:#f92672">}};</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[][][]</span> arr3d_2 <span style="color:#f92672">=</span> <span style="color:#f92672">{{</span> <span style="color:#f92672">{</span>0<span style="color:#f92672">,</span> 1<span style="color:#f92672">},</span> <span style="color:#f92672">{</span>1<span style="color:#f92672">,</span> 0<span style="color:#f92672">}},</span> <span style="color:#f92672">{</span> <span style="color:#f92672">{</span>0<span style="color:#f92672">,</span> 2<span style="color:#f92672">},</span> <span style="color:#f92672">{</span>2<span style="color:#f92672">,</span> 0<span style="color:#f92672">}</span> <span style="color:#f92672">}};</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;is arr3d_1 deepequals to arr3d_2 : &#34;</span> <span style="color:#f92672">+</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">deepEquals</span><span style="color:#f92672">(</span>arr3d_1<span style="color:#f92672">,</span> arr3d_2<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// true
+</span></span></span></code></pre></div><p>지난 시간 구현하였던 ArraySet 클래스에도 <strong>equals()</strong> 메소드를 구현해보고자 합니다.</p>
+<p>equals()의 매개변수로 ArraySet을 넣고 싶지만, 이렇게 될 경우 overriding이 아닌 overloading이 되어 버립니다. (Object의 equals()함수 원형과 동일해야 하기 때문입니다.) 따라서 불가피하게 Type Casting이 필요합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>Object other<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  ArraySet<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> o <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>ArraySet<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;)</span> other<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>불행하게도, 단순히 casting을 한다고 해서 문제가 해결되지는 않습니다.</p>
+<p>size() 메소드가 없는 타입이 매개변수로 전달될 경우, <strong>o.size()</strong> 호출 시 <code>ClassCastException</code> 런타임 에러가 발생하기 때문입니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>Object other<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    ArraySet<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> o <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>ArraySet<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;)</span> other<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>o<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>따라서, Casting을 수행하기 전에, getClass() 메소드로 Object의 타입을 검사하여 럼타임 에러를 방지해야 합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>Object other<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>other<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    ArraySet<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> o <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>ArraySet<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;)</span> other<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>o<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
+<p>이제, 발생할 수 있는 예외처리와 최적화를 진행해봅시다.</p>
+</blockquote>
+<ul>
+<li>
+<p>만약 사용자가 null, 혹은 의도치 않은 타입의 매개변수를 전달하게 되면, 오류가 발생할 것입니다. 이에 대한 예외처리도 추가해주었습니다.</p>
+</li>
+<li>
+<p>마지막으로, 자기 자신과 완정 동일한 Object가 비교 대상이 되는 경우, 굳이 item을 순회하면서 비교할 필요가 없기 때문에, 빠르게 결과를 return 해줍시다.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>other <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>other<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>완성된 equals() 메소드는 아래와 같으며, 처음 구현할 시에는 고려해야 할 것도 많고 귀찮지만, 한번 구현해둔 이후에는 요긴하게 사용할 수 있을 것입니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>Object other<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span> <span style="color:#f92672">==</span> other<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>other <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>other<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    ArraySet<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> o <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>ArraySet<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;)</span> other<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>o<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>T item <span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>o<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>item<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/kr/lecture9/" title="Lecture 9"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/kr/lecture1/" title="Lecture 1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1671451627"></script>
+    <script src="/js/perfect-scrollbar.min.js?1671451627"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1671451627"></script>
+    <script src="/js/jquery.sticky.js?1671451627"></script>
+    <script src="/js/featherlight.min.js?1671451627"></script>
+    <script src="/js/highlight.pack.js?1671451627"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1671451627"></script>
+    <script src="/js/learn.js?1671451627"></script>
+    <script src="/js/hugo-learn.js?1671451627"></script>
+    
+        
+            <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+
