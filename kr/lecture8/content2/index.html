@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="kr" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.1" />
+    <meta name="description" content="COM2018 OOP Class Lecture Note">
+<meta name="author" content="Soo Young Kim">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Exception, Iteration, toString, StringBuilder, equals - Documentation for Hugo Learn Theme</title>
+
+    
+    <link href="/css/nucleus.css?1671450425" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1671450425" rel="stylesheet">
+    <link href="/css/hybrid.css?1671450425" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1671450425" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1671450425" rel="stylesheet">
+    <link href="/css/auto-complete.css?1671450425" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1671450425" rel="stylesheet">
+    <link href="/css/theme.css?1671450425" rel="stylesheet">
+    <link href="/css/tabs.css?1671450425" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1671450425" rel="stylesheet">
+    
+    <link href="/css/theme-blue.css?1671450425" rel="stylesheet">
+    
+    <link href="/css/foo.css?1671450425" rel="stylesheet"><link href="/css/bar.css?1671450425" rel="stylesheet">
+
+    <script src="/js/jquery-3.3.1.min.js?1671450425"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/kr/lecture8/content2/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      
+<img width="1097" alt="image" src="https://user-images.githubusercontent.com/12381733/193000270-b9514c3e-3590-41e7-9209-7de6c08066c1.png">
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1671450425"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1671450425"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/kr";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1671450425"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/kr'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture1/" title="Lecture 1" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture1/">
+          <b> </b>Lecture 1
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture1/hello_world/" title="Hello World" class="dd-item ">
+        <a href="/kr/lecture1/hello_world/">
+        Hello World
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture2/" title="Lecture 2" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture2/">
+          <b> </b>Lecture 2
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture2/content1/" title="Classes and Objects, Static, Types" class="dd-item ">
+        <a href="/kr/lecture2/content1/">
+        Classes and Objects, Static, Types
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture3/" title="Lecture 3" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture3/">
+          <b> </b>Lecture 3
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture3/content1/" title="Class Defining, Instantiating, Array of Objects, Static vs Non-static" class="dd-item ">
+        <a href="/kr/lecture3/content1/">
+        Class Defining, Instantiating, Array of Objects, Static vs Non-static
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture3/content2/" title="Managing Complexity (Helper Method)" class="dd-item ">
+        <a href="/kr/lecture3/content2/">
+        Managing Complexity (Helper Method)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture4/" title="Lecture 4" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture4/">
+          <b> </b>Lecture 4
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture4/content1/" title="Selection Sort, A Simple JUnit test, Testing Philosophy" class="dd-item ">
+        <a href="/kr/lecture4/content1/">
+        Selection Sort, A Simple JUnit test, Testing Philosophy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture4/content2/" title="Unit Test &amp; Integration Test, Simpler JUnit Tests, Primtive Types" class="dd-item ">
+        <a href="/kr/lecture4/content2/">
+        Unit Test &amp; Integration Test, Simpler JUnit Tests, Primtive Types
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture5/" title="Lecture 5" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture5/">
+          <b> </b>Lecture 5
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture5/content1/" title="PARAMETER PASSING, LISTS, ARRAYS" class="dd-item ">
+        <a href="/kr/lecture5/content1/">
+        PARAMETER PASSING, LISTS, ARRAYS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture5/content2/" title="PUBLIC VS PRIVATE, Nested Classes" class="dd-item ">
+        <a href="/kr/lecture5/content2/">
+        PUBLIC VS PRIVATE, Nested Classes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture6/" title="Lecture 6" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture6/">
+          <b> </b>Lecture 6
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture6/content1/" title="SLList Upgrade, DLLs and Arrays" class="dd-item ">
+        <a href="/kr/lecture6/content1/">
+        SLList Upgrade, DLLs and Arrays
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture6/content2/" title="Generic Lists, AList, 2D Arrays" class="dd-item ">
+        <a href="/kr/lecture6/content2/">
+        Generic Lists, AList, 2D Arrays
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture7/" title="Lecture 7" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture7/">
+          <b> </b>Lecture 7
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture7/content1/" title="Memory Efficiency, Obscurantism, Inheritance, Interface" class="dd-item ">
+        <a href="/kr/lecture7/content1/">
+        Memory Efficiency, Obscurantism, Inheritance, Interface
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture7/content2/" title="Overriding vs Overloading" class="dd-item ">
+        <a href="/kr/lecture7/content2/">
+        Overriding vs Overloading
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture8/" title="Lecture 8" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/kr/lecture8/">
+          <b> </b>Lecture 8
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture8/content1/" title="java.util.List, Set in Java, Array Set 구현" class="dd-item ">
+        <a href="/kr/lecture8/content1/">
+        java.util.List, Set in Java, Array Set 구현
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture8/content2/" title="Exception, Iteration, toString, StringBuilder, equals" class="dd-item active">
+        <a href="/kr/lecture8/content2/">
+        Exception, Iteration, toString, StringBuilder, equals
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://github.com/com2018-fa22/hugo-blog"><i class='fab fa-fw fa-github'></i> GitHub repo</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://hokeun.github.io/"><i class='fas fa-fw fa-bookmark'></i> About our Instructor</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://sp21.datastructur.es/"><i class='fas fa-fw fa-bullhorn'></i> CS 61B Spring 2021</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="kr" value="/kr/lecture8/content2/" selected>Korean</option>
+                    
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://github.com/kimsooyoung">SwimmingKim</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/com2018-fa22/hugo-blog/tree/main/content/lecture8/content2.kr.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                   Exception, Iteration, toString, StringBuilder, equals
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#exception">Exception</a></li>
+        <li><a href="#iteration">Iteration</a></li>
+        <li><a href="#tostring">toString</a></li>
+        <li><a href="#stringbuilder">StringBuilder</a></li>
+        <li><a href="#equals-vs-">“equals()” vs “==”</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Exception, Iteration, toString, StringBuilder, equals
+            </h1>
+          
+
+        
+
+
+<h3 id="exception">Exception</h3>
+<p>만약 Set에 null을 추가하게 되다면 어떻게 될까요?</p>
+<p>add 자체는 되지 몰라도, contains 실행 시 null.equals()가 호출되면서 null point exception이 발생하게 됩니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Exception in thread <span style="color:#e6db74">&#34;main&#34;</span> java<span style="color:#f92672">.</span><span style="color:#a6e22e">lang</span><span style="color:#f92672">.</span><span style="color:#a6e22e">NullPointerException</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span>
+</span></span><span style="display:flex;"><span>Cannot invoke <span style="color:#e6db74">&#34;Object.equals(Object)&#34;</span> because <span style="color:#e6db74">&#34;this.items[i]&#34;</span> is <span style="color:#66d9ef">null</span>
+</span></span><span style="display:flex;"><span>	at ArraySet<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>ArraySet<span style="color:#f92672">.</span><span style="color:#a6e22e">java</span><span style="color:#f92672">:</span>18<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	at ArraySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>ArraySet<span style="color:#f92672">.</span><span style="color:#a6e22e">java</span><span style="color:#f92672">:</span>31<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	at ArraySet<span style="color:#f92672">.</span><span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>ArraySet<span style="color:#f92672">.</span><span style="color:#a6e22e">java</span><span style="color:#f92672">:</span>127<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>이러한 <strong>예외</strong>를 해결하기 위해 throw와 try/catch를 사용하는 예외처리 기법을 배워보도록 하겠습니다.</p>
+<p><img src="/kr/lecture8/images/lec8_4.png?height=400px" alt="img4"></p>
+<p>Java에서 예외를 다루는 Exception은 Object의 상속을 받는 <strong>클래스</strong>입니다. 따라서, 예외 상황이 발생하는 경우, throw new를 통해 새로운 인스턴스를 생성하여 전달합니다.</p>
+<p>현재 런타임 에러를 다뤄야 하기 때문에 <code>IllegalArgumentException</code>를 사용하였습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>T x<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;can&#39;t add null&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>contains<span style="color:#f92672">(</span>x<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    items<span style="color:#f92672">[</span>size<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> x<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    size <span style="color:#f92672">+=</span> 1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>예외가 발생하면, 프로그램은 기본적으로 종료됩니다. 프로그램이 종료되지 않게 하고 싶다면, catch문을 통해 이 상황을 다룰 수 있습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>T x<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;can&#39;t add null&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IllegalArgumentException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>citySet<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>현재는 IllegalArgumentException만을 catch 하였기 때문에, 그 이외의 예외들은 처리할 수 없습니다.</p>
+<p>하지만, 만약 <strong>Exception</strong>을 catch하도록 하면, 다형성을 사용하여 모든 예외 처리가 가능할 것입니다.</p>
+<hr>
+<h3 id="iteration">Iteration</h3>
+<p>Java에 내장된 Set이나 List는 아래와 같은 <strong>Enhanced-For Loop</strong>을 사용할 수 있습니다.</p>
+<p>하지만, 이를 사용하기 위해서는 class내부에 Iterator를 구현해주어야 하며, 계속해서 구현중인 ArraySet을 통해 이에 대해서 알아봅시다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    Set<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> javaset <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    javaset<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    javaset<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>23<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    javaset<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>42<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">:</span> javaset<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h5 id="iteration-구현-1---iteratort타입을-반환하는-iterator-메소드가-구현되어-있어야-합니다">Iteration 구현 1 - Iterator<!-- raw HTML omitted -->타입을 반환하는 iterator() 메소드가 구현되어 있어야 합니다.</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> Iterator<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">iterator</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#f92672">}</span>
+</span></span></code></pre></div><h5 id="iteration-구현-2---iterator-메소드가-return-할-iteratort-class를-구현합니다">Iteration 구현 2 - iterator() 메소드가 return 할 Iterator<!-- raw HTML omitted --> Class를 구현합니다.</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ArraySetIterator</span> <span style="color:#66d9ef">implements</span> Iterator<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> wizPos<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ArraySetIterator</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        wizPos <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">hasNext</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> wizPos <span style="color:#f92672">&lt;</span> size<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> T <span style="color:#a6e22e">next</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> items<span style="color:#f92672">[</span>wizPos<span style="color:#f92672">++];</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+<div class="notices note" ><p>현 상황에서 Array에 담긴 item이 100개가 넘어가면 오류가 발생하지만 우선 무시하고 진행하겠습니다.</p>
+</div>
+
+<ol>
+<li>Iterator는 인터페이스이며, 상속을 받을 시, boolean hasNext()와 T next()를 반드시 구현해주어야 합니다.</li>
+<li>hasNext는 다음 요소가 있는지 확인을 위한 메소드이며, next는 다음 요소의 값을 반환합니다.</li>
+<li>현재 자신이 바라보고 있는 지점이 어디인지 알아야 하기 때문에, ArraySetIterator는 wizPos라는 멤버 변수를 갖게 됩니다.</li>
+</ol>
+<h5 id="iteration-구현-3---이제-iterator-메소드에서-방금-구현한-따끈따끈한-arraysetiterator-class를-return하도록-수정합니다">Iteration 구현 3 - 이제, iterator() 메소드에서 방금 구현한 따끈따끈한 <code>ArraySetIterator</code> class를 return하도록 수정합니다.</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> Iterator<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">iterator</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ArraySetIterator<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
+<p>이제 iterator를 사용해봅시다.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    ArraySet<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> citySet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArraySet<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Seoul&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;San Francisco&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Los Angeles&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Washington DC&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Seoul&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Iterator<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> itr <span style="color:#f92672">=</span> citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span><span style="color:#f92672">(</span>itr<span style="color:#f92672">.</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">()){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>itr<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h5 id="iteration-구현-4---iterable-상속">Iteration 구현 4 - Iterable 상속</h5>
+<p>우리의 목표인 Enhanced For-Loop을 사용하기 위해서, <strong>Iterable 인터페이스를 상속받도록</strong> 하는 추가 작업이 필요합니다. 이 클래스가 반복자를 갖고 있다는 것을 명시적으로 알려주는 작업이지요. 더불어, Iterable interface를 상속하였으므로, iterator() 메소드에 override 키워드를 추가합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ArraySet</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">implements</span> Iterable<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">public</span> Iterator<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">iterator</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ArraySetIterator<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
+<p>이제, 완전한 Enhanced For-Loop를 사용할 수 있게 되었습니다!</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    ArraySet<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> citySet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArraySet<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Seoul&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;San Francisco&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Los Angeles&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Washington DC&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Seoul&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span>String str<span style="color:#f92672">:</span> citySet<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>str<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><hr>
+<p>정리해보면, Enhanced For-Loop를 사용하기 위해서 아래 조건들이 만족되어야 합니다.</p>
+<ol>
+<li>해당 클래스가 <strong>iterator() Method</strong>를 갖고 있는지</li>
+<li>해당 클래스의 <strong>iterator() Method</strong>가 반환하는 Iterator interface가 <strong>next/hasNext()</strong> 메소드를 갖고 있는지</li>
+</ol>
+
+<div class="notices note" ><p>참고로, Java의 Set Class는 아래 사진 사진과 같은 상속 구조를 갖고 있습니다.
+Iterable interface로부터 상속을 받기 때문에, enhanced for-loop를 사용할 수 있었던 것이지요.</p>
+</div>
+
+<p><img src="/kr/lecture8/images/lec8_5.png?height=400px" alt="img5"></p>
+
+<div class="notices tip" ><p>interface간 상속 시, implements가 아닌 <strong>extends</strong> 키워드를 사용하며, 클래스는 여러 interface를 상속받을 수 있는 반면, class는 단 하나 상속을 받을 수 있습니다.</p>
+</div>
+
+<hr>
+<h3 id="tostring">toString</h3>
+<blockquote>
+<p>ArraySet Object를 그대로 <strong>System.out.println</strong> 하게 되면 어떤 결과를 얻게 될까요?</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    ArraySet<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> citySet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArraySet<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Seoul&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;San Francisco&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Los Angeles&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Washington DC&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Seoul&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>citySet<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>실행결과 <span style="color:#f92672">:</span> ArraySet<span style="color:#a6e22e">@3fee733d</span>
+</span></span></code></pre></div><p>@뒤로 이상한 문자열이 붙은 결과를 얻었습니다.</p>
+<p>Object의 원본 코드를 보면 toString()이라는 메소드 안에서, 클래스 자체의 이름과 hash code라는 것을 합한 결과를 반환하는 것을 알 수 있습니다. @뒤의 문자열은 <strong>hash code</strong>였던 것이지요.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;@&#34;</span> <span style="color:#f92672">+</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">toHexString</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">hashCode</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>우리가 원하는 동작은 citySet의 모든 원소들을 콘솔 출력해주는 것입니다.</p>
+<p>이는 <code>toString()</code> 메소드를 오버라이딩함으로 구현할 수 있으며, toString() 메소드는 해당 클래스의 문자열 반환이 요청되었을 때 반환값을 지정할 수 있는 메소드입니다.</p>
+<ul>
+<li>ArraySet 클래스 내부에서 toString() 메소드를 구현해 봅시다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    String output <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;{&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> size<span style="color:#f92672">;</span> i <span style="color:#f92672">+=</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        output <span style="color:#f92672">+=</span> items<span style="color:#f92672">[</span>i<span style="color:#f92672">].</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    output <span style="color:#f92672">=</span> output<span style="color:#f92672">.</span><span style="color:#a6e22e">substring</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> output<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    output <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;}&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> output<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>실행 결과 <span style="color:#f92672">:</span> <span style="color:#f92672">{</span>Seoul<span style="color:#f92672">,</span>San Francisco<span style="color:#f92672">,</span>Los Angeles<span style="color:#f92672">,</span>Washington DC<span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+<div class="notices tip" ><p>toString() 메소드를 잘 구현해둔다면, 오류 디버깅 시 매우 유용할 것입니다.</p>
+</div>
+
+<hr>
+<h3 id="stringbuilder">StringBuilder</h3>
+<p>앞선 구현한 toString()은 사실 상당히 메모리 비효율적입니다.</p>
+<p>String class는 불변(immutable)이기 때문에, + 연산 시 기존 String이 업데이트되는 것이 아니라, 새로운 String이 계속해서 생성됩니다.</p>
+<p>이를 방지하기 위해, StringBuilder를 사용할 수 있습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    StringBuilder output <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;{&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> size<span style="color:#f92672">;</span> i <span style="color:#f92672">+=</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        output<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>items<span style="color:#f92672">[</span>i<span style="color:#f92672">].</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>i <span style="color:#f92672">!=</span> size <span style="color:#f92672">-</span> 1<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            output<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;,&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    output<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;}&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> output<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><hr>
+<h3 id="equals-vs-">“equals()” vs “==”</h3>
+<p>Reference Type의 비교 시 == 연산자는 단순히 메모리 박스의 주소만을 비교하는 것이기 때문에 큰 의미가 없습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Set<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> javaset <span style="color:#f92672">=</span> Set<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> 23<span style="color:#f92672">,</span> 42<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>Set<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> javaset2 <span style="color:#f92672">=</span> Set<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> 23<span style="color:#f92672">,</span> 42<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>javaset <span style="color:#f92672">==</span> javaset2<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> False
+</span></span></code></pre></div><p>실질적으로 두 Set이 같다는 것은, <strong>내부 저장된 원소들이 모두 일치</strong>한다는 뜻이지요.</p>
+<p>이러한 작업을 실행하는 것이 <code>equals()</code> 메소드이며, toString() 메소드처럼 이 또한 Object Class 내부에 구현되어 있습니다. 따라서, Override를 통해 우리만의 equals 메소드를 구현할 수 있습니다.</p>
+<ul>
+<li>equals() Method를 ArraySet에 맞게 다시 구현하고 최적화해봅시다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Object의 메소드를 overriding하기 때문에 동일한 signature를 가져야 합니다.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>Object o<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>o <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">// 이 부분이 속도를 최적화해준 부분입니다.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> <span style="color:#75715e">// 자기 자신과의 비교는 항상 true가 되기 때문입니다.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span> <span style="color:#f92672">==</span> o<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span> ArraySet<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> other <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>ArraySet<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;)</span> o<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> other<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>T item <span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>	 <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>other<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>item<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		 <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>	 <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>이제 equals()를 통해 ArraySet들 사이의 비교를 손쉽게 할 수 있게 되었습니다</li>
+<li>이런 메소드는 한 번 구현해두면 두고두고 사용할 수 있어 매우 편리합니다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>ArraySet<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> aset <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArraySet<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>aset<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>aset<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>23<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>aset<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>42<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ArraySet<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> aset2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArraySet<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>aset2<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>aset2<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>23<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>aset2<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>42<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// equals
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>aset<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>aset2<span style="color:#f92672">));</span>
+</span></span></code></pre></div>
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/kr/lecture8/content1/" title="java.util.List, Set in Java, Array Set 구현"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/kr/lecture8/content1/" title="java.util.List, Set in Java, Array Set 구현" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1671450425"></script>
+    <script src="/js/perfect-scrollbar.min.js?1671450425"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1671450425"></script>
+    <script src="/js/jquery.sticky.js?1671450425"></script>
+    <script src="/js/featherlight.min.js?1671450425"></script>
+    <script src="/js/highlight.pack.js?1671450425"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1671450425"></script>
+    <script src="/js/learn.js?1671450425"></script>
+    <script src="/js/hugo-learn.js?1671450425"></script>
+    
+        
+            <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

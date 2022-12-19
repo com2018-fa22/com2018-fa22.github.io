@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="kr" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.1" />
+    <meta name="description" content="COM2018 OOP Class Lecture Note">
+<meta name="author" content="Soo Young Kim">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>java.util.List, Set in Java, Array Set 구현 - Documentation for Hugo Learn Theme</title>
+
+    
+    <link href="/css/nucleus.css?1671450425" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1671450425" rel="stylesheet">
+    <link href="/css/hybrid.css?1671450425" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1671450425" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1671450425" rel="stylesheet">
+    <link href="/css/auto-complete.css?1671450425" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1671450425" rel="stylesheet">
+    <link href="/css/theme.css?1671450425" rel="stylesheet">
+    <link href="/css/tabs.css?1671450425" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1671450425" rel="stylesheet">
+    
+    <link href="/css/theme-blue.css?1671450425" rel="stylesheet">
+    
+    <link href="/css/foo.css?1671450425" rel="stylesheet"><link href="/css/bar.css?1671450425" rel="stylesheet">
+
+    <script src="/js/jquery-3.3.1.min.js?1671450425"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/kr/lecture8/content1/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      
+<img width="1097" alt="image" src="https://user-images.githubusercontent.com/12381733/193000270-b9514c3e-3590-41e7-9209-7de6c08066c1.png">
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1671450425"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1671450425"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/kr";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1671450425"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/kr'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture1/" title="Lecture 1" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture1/">
+          <b> </b>Lecture 1
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture1/hello_world/" title="Hello World" class="dd-item ">
+        <a href="/kr/lecture1/hello_world/">
+        Hello World
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture2/" title="Lecture 2" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture2/">
+          <b> </b>Lecture 2
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture2/content1/" title="Classes and Objects, Static, Types" class="dd-item ">
+        <a href="/kr/lecture2/content1/">
+        Classes and Objects, Static, Types
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture3/" title="Lecture 3" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture3/">
+          <b> </b>Lecture 3
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture3/content1/" title="Class Defining, Instantiating, Array of Objects, Static vs Non-static" class="dd-item ">
+        <a href="/kr/lecture3/content1/">
+        Class Defining, Instantiating, Array of Objects, Static vs Non-static
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture3/content2/" title="Managing Complexity (Helper Method)" class="dd-item ">
+        <a href="/kr/lecture3/content2/">
+        Managing Complexity (Helper Method)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture4/" title="Lecture 4" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture4/">
+          <b> </b>Lecture 4
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture4/content1/" title="Selection Sort, A Simple JUnit test, Testing Philosophy" class="dd-item ">
+        <a href="/kr/lecture4/content1/">
+        Selection Sort, A Simple JUnit test, Testing Philosophy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture4/content2/" title="Unit Test &amp; Integration Test, Simpler JUnit Tests, Primtive Types" class="dd-item ">
+        <a href="/kr/lecture4/content2/">
+        Unit Test &amp; Integration Test, Simpler JUnit Tests, Primtive Types
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture5/" title="Lecture 5" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture5/">
+          <b> </b>Lecture 5
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture5/content1/" title="PARAMETER PASSING, LISTS, ARRAYS" class="dd-item ">
+        <a href="/kr/lecture5/content1/">
+        PARAMETER PASSING, LISTS, ARRAYS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture5/content2/" title="PUBLIC VS PRIVATE, Nested Classes" class="dd-item ">
+        <a href="/kr/lecture5/content2/">
+        PUBLIC VS PRIVATE, Nested Classes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture6/" title="Lecture 6" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture6/">
+          <b> </b>Lecture 6
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture6/content1/" title="SLList Upgrade, DLLs and Arrays" class="dd-item ">
+        <a href="/kr/lecture6/content1/">
+        SLList Upgrade, DLLs and Arrays
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture6/content2/" title="Generic Lists, AList, 2D Arrays" class="dd-item ">
+        <a href="/kr/lecture6/content2/">
+        Generic Lists, AList, 2D Arrays
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture7/" title="Lecture 7" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kr/lecture7/">
+          <b> </b>Lecture 7
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture7/content1/" title="Memory Efficiency, Obscurantism, Inheritance, Interface" class="dd-item ">
+        <a href="/kr/lecture7/content1/">
+        Memory Efficiency, Obscurantism, Inheritance, Interface
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture7/content2/" title="Overriding vs Overloading" class="dd-item ">
+        <a href="/kr/lecture7/content2/">
+        Overriding vs Overloading
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kr/lecture8/" title="Lecture 8" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/kr/lecture8/">
+          <b> </b>Lecture 8
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture8/content1/" title="java.util.List, Set in Java, Array Set 구현" class="dd-item active">
+        <a href="/kr/lecture8/content1/">
+        java.util.List, Set in Java, Array Set 구현
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kr/lecture8/content2/" title="Exception, Iteration, toString, StringBuilder, equals" class="dd-item ">
+        <a href="/kr/lecture8/content2/">
+        Exception, Iteration, toString, StringBuilder, equals
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://github.com/com2018-fa22/hugo-blog"><i class='fab fa-fw fa-github'></i> GitHub repo</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://hokeun.github.io/"><i class='fas fa-fw fa-bookmark'></i> About our Instructor</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://sp21.datastructur.es/"><i class='fas fa-fw fa-bullhorn'></i> CS 61B Spring 2021</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="kr" value="/kr/lecture8/content1/" selected>Korean</option>
+                    
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://github.com/kimsooyoung">SwimmingKim</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/com2018-fa22/hugo-blog/tree/main/content/lecture8/content1.kr.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                   java.util.List, Set in Java, Array Set 구현
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#alist-inheritance-interface">AList, Inheritance, Interface</a></li>
+        <li><a href="#is-a-vs-has-a">“Is-a” vs “Has-a”</a></li>
+        <li><a href="#set-in-java">Set in Java</a></li>
+        <li><a href="#arrayset-구현">ArraySet 구현</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              java.util.List, Set in Java, Array Set 구현
+            </h1>
+          
+
+        
+
+
+<h3 id="alist-inheritance-interface">AList, Inheritance, Interface</h3>
+<p><img src="/kr/lecture8/images/lec8_0.png?" alt="img0"></p>
+<p>일전, ListOOP라는 클래스로부터 상속받는 AList와 SLList 클래스를 구현하였습니다.</p>
+<p>AList는 Array기반의 List이며, SLList는 Linked List 기반의 List였지요.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Lecture8</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> L <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>        L<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        L<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        L<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>15<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>L<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>그런데, Java에는 이미 <em>ArrayList</em>라는 내장 클래스가 존재하며, 파이썬의 list와 유사하게 편리하게 사용할 수 있습니다.</p>
+<p>java.util.List는 interface로, <code>new List&lt;&gt;()</code>와 같은 생성은 불가하지만 상속을 통해 <em>ArrayList</em>, <em>Vector</em>, <em>LinkedList</em> 등 java의 다양한 List 타입을 손쉽게 사용할 수 있습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.LinkedList<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Vector<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> arr_list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> v_list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Vector<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> linked_list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;&gt;();</span>
+</span></span></code></pre></div><hr>
+<h3 id="is-a-vs-has-a">“Is-a” vs “Has-a”</h3>
+<p>다음과 같은 예시를 생각해 봅시다.</p>
+<ul>
+<li>사자는 동물이다 ⇒ O</li>
+<li>사자는 표유류 동물이다. ⇒ O</li>
+<li>사자는 고양이과 동물이다. ⇒ O</li>
+</ul>
+<p><img src="/kr/lecture8/images/lec8_1.png?height=500px&amp;classes=shadow" alt="img1"></p>
+<ul>
+<li><a href="https://namu.wiki/w/%EC%82%AC%EC%9E%90">https://namu.wiki/w/사자</a></li>
+</ul>
+<p>위 그림에서 사자보다 높은 계층에 속하는 범주에 대해 사자 is-a Something의 관계가 성립하는 것을 확인할 수 있습니다.</p>
+<p>반면, 이번에는 다른 예시를 살펴보겠습니다.</p>
+<ul>
+<li>바퀴는 자동차다 ⇒ X</li>
+<li>엔진은 자동차다 ⇒ X</li>
+<li>시트는 자동차다 ⇒ X</li>
+</ul>
+<p>바퀴는 자동차에 포함된다 라고는 말할 수 있지만 <em>바퀴는 자동차다</em>라고 말할 수는 없습니다.</p>
+<p>바퀴와 자동차 사이의 관계는 <em>is-a</em>가 아닌 <em>has-a</em>의 관계를 갖게 되며, 이런 경우 상속을 통해 구현하면 안될 것입니다. (객체지향에 대한 설계구조 없이 개발을 할 시 혼란스러움을 유발할 수 있는 요소가 됩니다.)</p>
+<p><img src="/kr/lecture8/images/lec8_2.png" alt="img2"></p>
+<ul>
+<li><a href="http://me-resetsg.blogspot.com/2015/11/car-internal-view.html">http://me-resetsg.blogspot.com/</a></li>
+</ul>
+<hr>
+<h3 id="set-in-java">Set in Java</h3>
+<p>set은 고등학교 시간에 배운 “집합”과 유사합니다. 집합의 주요한 특징으로, 집합 안에는 같은 값을 갖는 원소가 2개 이상 존재할 수 없습니다.</p>
+<p><img src="/kr/lecture8/images/lec8_3.png?height=400px" alt="img3"></p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Set_theory">https://en.wikipedia.org/wiki/Set_theory</a></li>
+</ul>
+<p>Java에서 Set은 다음과 같이 사용합니다. List와 마찬가지로 Set에는 HashSet, TreeSet, LinkedHashSet등 여러 종류가 있으며, 모두 interface인 Set을 상속받습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Lecture8</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        Set<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> S <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        S<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Seoul&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        S<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;San Francisco&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        S<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Los Angeles&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        S<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Washington DC&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        S<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Seoul&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>S<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 결과
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// [San Francisco, Washington DC, Seoul, Los Angeles]
+</span></span></span></code></pre></div><p>Seoul을 두 번 추가하였지만, Set의 특징으로 인해 배제되었습니다.</p>
+<hr>
+<h3 id="arrayset-구현">ArraySet 구현</h3>
+
+<div class="notices tip" ><p>이번 구현의 완성된 코드는 다음 링크에서 찾아볼 수 있습니다. <a href="https://github.com/Berkeley-CS61B/lectureCode-fa20/blob/master/inheritance4/ArraySet.java">CS61B - ArraySet.java</a></p>
+</div>
+
+<blockquote>
+<p>array에 기반한 set 자료구조를 직접 구현해봅시다!</p>
+</blockquote>
+<p>생성자를 먼저 살펴보면, generic을 위해 Object 타입의 배열을 우선 생성한 뒤, 타입 T로 캐스팅하는 모습을 볼 수 있습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ArraySet</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> T<span style="color:#f92672">[]</span> items<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> size<span style="color:#f92672">;</span> <span style="color:#75715e">// the next item to be added will be at position size
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ArraySet</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        items <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>T<span style="color:#f92672">[])</span> <span style="color:#66d9ef">new</span> Object<span style="color:#f92672">[</span>100<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>        size <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span></code></pre></div><p>Set의 주요한 특징인, 중복을 허용하지 않는 부분은 contains라는 메소드로 구현하고자 합니다.</p>
+<p>모든 Array를 순회하면서, 이미 중복되는 값이 있다면 true를 반환합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>T x<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> size<span style="color:#f92672">;</span> i <span style="color:#f92672">+=</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>items<span style="color:#f92672">[</span>i<span style="color:#f92672">].</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>x<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>contains를 구현하였다면, 이제 이는 add에 사용될 수 있습니다. Set에 add 시, 중복 검사를 먼저 거친 뒤, 통과된 요소만 새롭게 추가하는 것입니다. (size도 +1 해줘야 하겠지요)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>T x<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>contains<span style="color:#f92672">(</span>x<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    items<span style="color:#f92672">[</span>size<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> x<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    size <span style="color:#f92672">+=</span> 1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>Java의 HashSet과 우리가 구현한 ArraySet을 비교해봅시다.</p>
+<ul>
+<li><em>ArraySet</em> 사용 시</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    ArraySet<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> citySet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArraySet<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Seoul&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;San Francisco&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Los Angeles&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Washington DC&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Seoul&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>citySet<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 실행 결과
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// {Seoul, San Francisco, Los Angeles, Washington DC}
+</span></span></span></code></pre></div><ul>
+<li><em>Set</em> 사용 시</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    Set<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> citySetJava <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    citySetJava<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Seoul&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySetJava<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;San Francisco&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySetJava<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Los Angeles&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySetJava<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Washington DC&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    citySetJava<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Seoul&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>citySetJava<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 실행 결과
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// [San Francisco, Washington DC, Seoul, Los Angeles]
+</span></span></span></code></pre></div><p>출력 순서가 약간 다르지만, Set에서 순서의 큰 의미는 없습니다.</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/kr/lecture8/" title="Lecture 8"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/kr/lecture8/content2/" title="Exception, Iteration, toString, StringBuilder, equals" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1671450425"></script>
+    <script src="/js/perfect-scrollbar.min.js?1671450425"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1671450425"></script>
+    <script src="/js/jquery.sticky.js?1671450425"></script>
+    <script src="/js/featherlight.min.js?1671450425"></script>
+    <script src="/js/highlight.pack.js?1671450425"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1671450425"></script>
+    <script src="/js/learn.js?1671450425"></script>
+    <script src="/js/hugo-learn.js?1671450425"></script>
+    
+        
+            <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

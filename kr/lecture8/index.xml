@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lecture 8 on Documentation for Hugo Learn Theme</title>
+    <link>/kr/lecture8/</link>
+    <description>Recent content in Lecture 8 on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 19 Apr 2022 16:51:44 +0900</lastBuildDate><atom:link href="/kr/lecture8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>java.util.List, Set in Java, Array Set 구현</title>
+      <link>/kr/lecture8/content1/</link>
+      <pubDate>Mon, 19 Dec 2022 16:52:30 +0900</pubDate>
+      
+      <guid>/kr/lecture8/content1/</guid>
+      <description>AList, Inheritance, Interface 일전, ListOOP라는 클래스로부터 상속받는 AList와 SLList 클래스를 구현하였습니다.
+AList는 Array기반의 List이며, SLList는 Linked List 기반의 List였지요.
+import java.util.List; import java.util.ArrayList; public class Lecture8 { public static void main(String[] args) { List&amp;lt;Integer&amp;gt; L = new ArrayList&amp;lt;&amp;gt;(); L.add(5); L.add(10); L.add(15); System.out.println(L); } } 그런데, Java에는 이미 ArrayList라는 내장 클래스가 존재하며, 파이썬의 list와 유사하게 편리하게 사용할 수 있습니다.
+java.util.List는 interface로, new List&amp;lt;&amp;gt;()와 같은 생성은 불가하지만 상속을 통해 ArrayList, Vector, LinkedList 등 java의 다양한 List 타입을 손쉽게 사용할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>Exception, Iteration, toString, StringBuilder, equals</title>
+      <link>/kr/lecture8/content2/</link>
+      <pubDate>Sun, 18 Dec 2022 10:08:46 +0900</pubDate>
+      
+      <guid>/kr/lecture8/content2/</guid>
+      <description>Exception 만약 Set에 null을 추가하게 되다면 어떻게 될까요?
+add 자체는 되지 몰라도, contains 실행 시 null.equals()가 호출되면서 null point exception이 발생하게 됩니다.
+Exception in thread &amp;#34;main&amp;#34; java.lang.NullPointerException: - Cannot invoke &amp;#34;Object.equals(Object)&amp;#34; because &amp;#34;this.items[i]&amp;#34; is null at ArraySet.contains(ArraySet.java:18) at ArraySet.add(ArraySet.java:31) at ArraySet.main(ArraySet.java:127) 이러한 예외를 해결하기 위해 throw와 try/catch를 사용하는 예외처리 기법을 배워보도록 하겠습니다.
+Java에서 예외를 다루는 Exception은 Object의 상속을 받는 클래스입니다. 따라서, 예외 상황이 발생하는 경우, throw new를 통해 새로운 인스턴스를 생성하여 전달합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

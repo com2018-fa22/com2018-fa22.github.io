@@ -93,11 +93,14 @@
                 href="/kr/lecture7/"
                 />
   </url><url>
-    <loc>/kr/lecture7/content1/</loc>
-    <lastmod>2022-10-21T16:53:41+09:00</lastmod>
+    <loc>/kr/lecture8/</loc>
+    <lastmod>2022-04-19T16:51:44+09:00</lastmod>
+  </url><url>
+    <loc>/kr/lecture8/content1/</loc>
+    <lastmod>2022-12-19T16:52:30+09:00</lastmod>
   </url><url>
     <loc>/kr/</loc>
-    <lastmod>2022-10-21T16:53:41+09:00</lastmod>
+    <lastmod>2022-12-19T16:52:30+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -108,6 +111,12 @@
                 hreflang="kr"
                 href="/kr/"
                 />
+  </url><url>
+    <loc>/kr/lecture8/content2/</loc>
+    <lastmod>2022-12-18T10:08:46+09:00</lastmod>
+  </url><url>
+    <loc>/kr/lecture7/content1/</loc>
+    <lastmod>2022-10-21T16:53:41+09:00</lastmod>
   </url><url>
     <loc>/kr/lecture7/content2/</loc>
     <lastmod>2022-10-21T12:41:27+09:00</lastmod>
