@@ -6,7 +6,31 @@
     <description>Recent content in 한양대학교 융합전자공학부 OOP 정리노트 on Documentation for Hugo Learn Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 19 Dec 2022 20:50:05 +0900</lastBuildDate><atom:link href="/kr/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Dec 2022 09:08:40 +0900</lastBuildDate><atom:link href="/kr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>More Inheritance, Constructor, Encapsulation and Module</title>
+      <link>/kr/lecture11/content1/</link>
+      <pubDate>Tue, 20 Dec 2022 09:08:40 +0900</pubDate>
+      
+      <guid>/kr/lecture11/content1/</guid>
+      <description>More Inheritance 클래스의 상속에 대해서 좀 더 자세하게 배워봅시다.
+그 전에 복습을 해보자면, 클래스의 상속은 extends를, interface의 상속에는 implements를 사용했습니다.
+public class ExampleClass extends SthClass { ... public class ExampleClass implements SthInterface { ... 사진과 같이, 기반이 되는 Base Class와 Child Class가 나무처럼 얽히고 뻗어가면서 상속이 구성되었습니다.
+ListOOP와 AList, SLList는 모두 지난 시간 구현하였던 클래스들입니다. 따라서, 이번에는 RotatingSLList라는 클래스를 상속에 기반해서 새로 설계해봅시다.
+RotatingSLList는 이름과 같이 모든 요소들이 한칸씩 뒤로 밀리고, 가장 뒤에 있던 요소는 맨 앞으로 돌아오는 List입니다.</description>
+    </item>
+    
+    <item>
+      <title>Map, Serializable and Storing Data Structures</title>
+      <link>/kr/lecture10/content1/</link>
+      <pubDate>Mon, 19 Dec 2022 21:48:30 +0900</pubDate>
+      
+      <guid>/kr/lecture10/content1/</guid>
+      <description>utils.Map 사용법 Map은 클래스가 아닌 interface이며, HashMap, TreeMap, LinkedHashMap등 다양한 자료구조들이 Map을 상속받고 있습니다.
+import java.util.HashMap; import java.util.Map; public class MapExample { public static void main(String[] args) { Map&amp;lt;String, String&amp;gt; my_map = new HashMap&amp;lt;&amp;gt;(); my_map.put(&amp;#34;name&amp;#34;, &amp;#34;kim&amp;#34;); my_map.put(&amp;#34;nickname&amp;#34;, &amp;#34;Swimming Kim&amp;#34;); my_map.put(&amp;#34;address&amp;#34;, &amp;#34;Seoul, South Korea&amp;#34;); System.out.println(my_map); } } map 자료구조를 사용하다보면, key와 value에 별도로 접근하고 싶은 경우가 생깁니다.
+map에 구현된 keySet(), values() 메소드와, enhanced-for-loop을 사용하면 손쉽게 map의 각 값들에 접근할 수 있습니다.</description>
+    </item>
+    
     <item>
       <title>DeepEquals, Vargs, Main Method</title>
       <link>/kr/lecture9/content1/</link>

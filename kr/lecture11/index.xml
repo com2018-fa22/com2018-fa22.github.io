@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lecture 11 on Documentation for Hugo Learn Theme</title>
+    <link>/kr/lecture11/</link>
+    <description>Recent content in Lecture 11 on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 20 Jan 2022 09:08:34 +0900</lastBuildDate><atom:link href="/kr/lecture11/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>More Inheritance, Constructor, Encapsulation and Module</title>
+      <link>/kr/lecture11/content1/</link>
+      <pubDate>Tue, 20 Dec 2022 09:08:40 +0900</pubDate>
+      
+      <guid>/kr/lecture11/content1/</guid>
+      <description>More Inheritance 클래스의 상속에 대해서 좀 더 자세하게 배워봅시다.
+그 전에 복습을 해보자면, 클래스의 상속은 extends를, interface의 상속에는 implements를 사용했습니다.
+public class ExampleClass extends SthClass { ... public class ExampleClass implements SthInterface { ... 사진과 같이, 기반이 되는 Base Class와 Child Class가 나무처럼 얽히고 뻗어가면서 상속이 구성되었습니다.
+ListOOP와 AList, SLList는 모두 지난 시간 구현하였던 클래스들입니다. 따라서, 이번에는 RotatingSLList라는 클래스를 상속에 기반해서 새로 설계해봅시다.
+RotatingSLList는 이름과 같이 모든 요소들이 한칸씩 뒤로 밀리고, 가장 뒤에 있던 요소는 맨 앞으로 돌아오는 List입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

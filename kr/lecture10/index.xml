@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lecture 10 on Documentation for Hugo Learn Theme</title>
+    <link>/kr/lecture10/</link>
+    <description>Recent content in Lecture 10 on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 19 Feb 2022 21:48:23 +0900</lastBuildDate><atom:link href="/kr/lecture10/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Map, Serializable and Storing Data Structures</title>
+      <link>/kr/lecture10/content1/</link>
+      <pubDate>Mon, 19 Dec 2022 21:48:30 +0900</pubDate>
+      
+      <guid>/kr/lecture10/content1/</guid>
+      <description>utils.Map 사용법 Map은 클래스가 아닌 interface이며, HashMap, TreeMap, LinkedHashMap등 다양한 자료구조들이 Map을 상속받고 있습니다.
+import java.util.HashMap; import java.util.Map; public class MapExample { public static void main(String[] args) { Map&amp;lt;String, String&amp;gt; my_map = new HashMap&amp;lt;&amp;gt;(); my_map.put(&amp;#34;name&amp;#34;, &amp;#34;kim&amp;#34;); my_map.put(&amp;#34;nickname&amp;#34;, &amp;#34;Swimming Kim&amp;#34;); my_map.put(&amp;#34;address&amp;#34;, &amp;#34;Seoul, South Korea&amp;#34;); System.out.println(my_map); } } map 자료구조를 사용하다보면, key와 value에 별도로 접근하고 싶은 경우가 생깁니다.
+map에 구현된 keySet(), values() 메소드와, enhanced-for-loop을 사용하면 손쉽게 map의 각 값들에 접근할 수 있습니다.</description>
+    </item>
+    
+  </channel>
+</rss>
