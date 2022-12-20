@@ -6,7 +6,19 @@
     <description>Recent content in 한양대학교 융합전자공학부 OOP 정리노트 on Documentation for Hugo Learn Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 20 Dec 2022 09:08:40 +0900</lastBuildDate><atom:link href="/kr/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Dec 2022 10:35:10 +0900</lastBuildDate><atom:link href="/kr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Type Checking and Casting, Higher Order Functions</title>
+      <link>/kr/lecture12/content1/</link>
+      <pubDate>Tue, 20 Dec 2022 10:35:10 +0900</pubDate>
+      
+      <guid>/kr/lecture12/content1/</guid>
+      <description>Type Checking and Casting 위 내용을 학습하기 위해서, DMS(Dynamic Method Selection), Static Type과 Dynamic Type, 그리고 상속의 is-a 관계에 대한 이해가 필요합니다.
+퍼즐과 함께 Lecture12를 시작해봅시다. 기억할지 모르겠지만, 지난 시간 구현하였던 SLList, VengefulSLList 클래스를 사용하는 퀴즈입니다.
+(VengefulSLList는 SLList를 상속받아 removeLast() 메소드를 overriding 하며, printLostItems라는 메소드를 추가로 갖고 있습니다.)
+아래 코드에서 에러가 발생할까요? 그렇다면 어디에서, 왜 에러가 발생할까요? s1의 static type은 SLList이며, dynamic type은 VengefulSLList입니다. 따라서, s1.addLast()와 s1.removeLast()는 전혀 문제가 되지 않습니다.</description>
+    </item>
+    
     <item>
       <title>More Inheritance, Constructor, Encapsulation and Module</title>
       <link>/kr/lecture11/content1/</link>
@@ -65,6 +77,17 @@ java.util.List는 interface로, new List&amp;lt;&amp;gt;()와 같은 생성은 �
 add 자체는 되지 몰라도, contains 실행 시 null.equals()가 호출되면서 null point exception이 발생하게 됩니다.
 Exception in thread &amp;#34;main&amp;#34; java.lang.NullPointerException: - Cannot invoke &amp;#34;Object.equals(Object)&amp;#34; because &amp;#34;this.items[i]&amp;#34; is null at ArraySet.contains(ArraySet.java:18) at ArraySet.add(ArraySet.java:31) at ArraySet.main(ArraySet.java:127) 이러한 예외를 해결하기 위해 throw와 try/catch를 사용하는 예외처리 기법을 배워보도록 하겠습니다.
 Java에서 예외를 다루는 Exception은 Object의 상속을 받는 클래스입니다. 따라서, 예외 상황이 발생하는 경우, throw new를 통해 새로운 인스턴스를 생성하여 전달합니다.</description>
+    </item>
+    
+    <item>
+      <title>Polymorphism vs HoF, Comparable</title>
+      <link>/kr/lecture12/content2/</link>
+      <pubDate>Sun, 20 Nov 2022 10:36:49 +0900</pubDate>
+      
+      <guid>/kr/lecture12/content2/</guid>
+      <description>More about DMS and Subtype Polymorphism vs HoFs type casting에 대한 이해를 확인할 겸, 퀴즈를 풀어봅시다.
+아래와 같이 Object → Dog → ShowDog의 순서로 상속 관계를 갖고 있다고 했을 때, 질문들에 대한 대답을 해보세요!
+아래 코드의 각 라인들에서 컴파일 에러가 발생하는지 확인해봅시다. 각 메소드 호출들에 대해서 1. Dog.bark() 2. ShowDog.bark() 3. Syntax Error 중 어떠한 결과를 얻게 되는지 예상해보세요. Object o2 = new ShowDog(&amp;#34;Mortimer&amp;#34;, &amp;#34;Corgi&amp;#34;, 25, 512.2); ShowDog sdx = ((ShowDog) o2; sdx.</description>
     </item>
     
     <item>
