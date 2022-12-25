@@ -221,5 +221,32 @@ Test-Driven Development (TDD)
 이러한 문제를 해결하기 위해 우리는 helper method를 사용하여 코드를 분리하고 정리합니다.</description>
     </item>
     
+    <item>
+      <title>Branch and Merge</title>
+      <link>/kr/gitlet/content3/</link>
+      <pubDate>Fri, 25 Mar 2022 10:28:31 +0900</pubDate>
+      
+      <guid>/kr/gitlet/content3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git: How it works</title>
+      <link>/kr/gitlet/content2/</link>
+      <pubDate>Fri, 25 Feb 2022 10:28:28 +0900</pubDate>
+      
+      <guid>/kr/gitlet/content2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What is git?</title>
+      <link>/kr/gitlet/content1/</link>
+      <pubDate>Tue, 25 Jan 2022 10:28:26 +0900</pubDate>
+      
+      <guid>/kr/gitlet/content1/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

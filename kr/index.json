@@ -84,6 +84,13 @@
 	"content": "Lecture 12 Type Checking and Casting, Higher Order Functions Polymorphism vs HoF, Comparable "
 },
 {
+	"uri": "/kr/gitlet/",
+	"title": "Gitlet",
+	"tags": [],
+	"description": "",
+	"content": "Gitlet version control system git by Java What is git? Git: How it works Branch and Merge "
+},
+{
 	"uri": "/kr/lecture12/content1/",
 	"title": "Type Checking and Casting, Higher Order Functions",
 	"tags": [],
@@ -95,7 +102,7 @@
 	"title": "한양대학교 융합전자공학부 OOP 정리노트",
 	"tags": [],
 	"description": "",
-	"content": "한양대학교 융합전자공학부 OOP 정리노트 본 사이트는 2022년 \u0026ldquo;COM2018: Object-Oriented Programming\u0026rdquo; 강의 중 발생한 코드를 정리합니다.\n현재까지 정리된 강의는 다음과 같습니다.\nLecture 1. Course Introduction \u0026amp; Java Basics Lecture 2. Classes and Objects, Static, Types Lecture 3. Defining \u0026amp; Instantiating, Static vs Non-static, Managing - Complexity, Primitive Types Lecture 4. Unit Testing Lecture 5. Linked List (IntList \u0026amp; SLList), PUBLIC VS PRIVATE, Nested Classes, List \u0026amp; Array Lecture 6. Doubly Linked List, Generic Lists, AList Lecture 7. Inheritance and Interface, Overriding and Overloading Lecture 8. Java Built in Interfaces, Set, Exception, Iteration and Useful Class Methods Lecture 9. DeepEquals, Vargs, Main Method Lecture 10. Map, Serializable and Storing Data Structures Lecture 11. More Inheritance, Constructor, Encapsulation and Module "
+	"content": "한양대학교 융합전자공학부 OOP 정리노트 본 사이트는 2022년 \u0026ldquo;COM2018: Object-Oriented Programming\u0026rdquo; 강의 중 발생한 코드를 정리합니다.\n현재까지 정리된 강의는 다음과 같습니다.\nLecture 1. Course Introduction \u0026amp; Java Basics Lecture 2. Classes and Objects, Static, Types Lecture 3. Defining \u0026amp; Instantiating, Static vs Non-static, Managing - Complexity, Primitive Types Lecture 4. Unit Testing Lecture 5. Linked List (IntList \u0026amp; SLList), PUBLIC VS PRIVATE, Nested Classes, List \u0026amp; Array Lecture 6. Doubly Linked List, Generic Lists, AList Lecture 7. Inheritance and Interface, Overriding and Overloading Lecture 8. Java Built in Interfaces, Set, Exception, Iteration and Useful Class Methods Lecture 9. DeepEquals, Vargs, Main Method Lecture 10. Map, Serializable and Storing Data Structures Lecture 11. More Inheritance, Constructor, Encapsulation and Module Lecture 12. Type Checking and Casting, Higher Order Functions, Polymorphism vs HoF, Comparable Project Gitlet (implementation of Git) "
 },
 {
 	"uri": "/kr/lecture11/content1/",
@@ -222,6 +229,27 @@
 	"tags": [],
 	"description": "",
 	"content": " 코드의 complexity를 관리하기 (helper method) Managing Complexity with Helper Methods 왜 자바에서는 모든 코드가 클래스안에 존재하며, static method를 사용하고 있을까요?\n코드의 complexity를 낮추고, 사용자의 실수를 방지할 수 있기 때문입니다. static method를 사용하면, 사용자, 혹은 다른 프로그래머가 가용한 option이 적어지며, 이는 오류의 option을 줄이게 됩니다. helper method 사용하는 모든 코드가 main 함수 안에 구현되어 있다고 생각해봅시다. 방대한 코드는 가독성을 떨어뜨릴 뿐더러, 실수를 유발합니다.\n이러한 문제를 해결하기 위해 우리는 helper method를 사용하여 코드를 분리하고 정리합니다.\nlargerThanFourNeighbors 예시를 통해 살펴봅시다.\n해당 element가 좌우 2개씩, 총 4개의 element들과 비교해서 가장 크다면 해당 element를 추가하여 output array를 만듭니다.\n예를 들어, [10, 20, 30, 25, 20, 40, 10]이 input으로 사용된 경우, output은 [30, 40]이 됩니다.\n30 is greater than 10, 20, 25, and 20. 40 is greater than 25, 20, and 10. 구현은 다음과 같습니다.\nlargerThanFourNeighbors public static Dog[] largerThanFourNeighbors(Dog[] dogs) { Dog[] returnDogs = new Dog[dogs.length]; int count = 0; for(int i = 0; i \u0026lt; dogs.length; i++){ boolean isBigger = true; for(int j = i - 2; j \u0026lt;= i + 2; j++){ if(j \u0026lt; 0 || j \u0026gt;= dogs.length || j == i){ continue; } if(dogs[i].weightInPounds \u0026lt;= dogs[j].weightInPounds){ isBigger = false; } } if(isBigger) { returnDogs[count] = dogs[i]; count++; } } Dog[] answerDogs = new Dog[count]; for(int i = 0; i \u0026lt; count; i++){ answerDogs[i] = returnDogs[i]; } return answerDogs; } 방대한 양의 코드가 작성되었으며, 가독성 또한 떨어졌습니다.\n이 상황에서 helper function을 통해 작성된 코드의 complexity를 줄여봅시다.\nanswerDogs을 생성하며 array를 복사하는 부분을 별도의 method로 분리해봅시다.\nhelper method를 작성할 때는 항상 method의 input과 output에 주의하여 코드를 작성합니다.\ninput : 원본 array와 복사를 원하는 element의 개수 output : 복사가 완료된 새로운 array public static Dog[] createNewDogs(Dog[] originalDogs, int count) { Dog[] answerDogs = new Dog[count]; for (int i = 0; i \u0026lt; count; i++) { answerDogs[i] = originalDogs[i]; } return answerDogs; } 추가로 주변 4개의 이웃 element들과 크기를 비교해주는 helper method도 작성해봅시다.\ninput : 원본 array와 현재 탐색하기 원하는 index output : 조건을 만족했는지의 여부를 boolean으로 return public static boolean isBiggerThanFourNeighbors(int currentIndex, Dog[] dogs) { for (int j = currentIndex - 2; j \u0026lt;= currentIndex + 2; j++) { if (j \u0026lt; 0 || j \u0026gt;= dogs.length || currentIndex == j) { continue; } if (dogs[currentIndex].weightInPounds \u0026lt;= dogs[j].weightInPounds) { return false; } } return true; } 최종 정리된 코드는 다음과 같습니다. 기존 코드보다 가독성도 높아지고 실수가 발생할 여지 또한 줄어들었습니다.\nlargerThanFourNeighbors public static boolean isBiggerThanFourNeighbors(int currentIndex, Dog[] dogs) { for (int j = currentIndex - 2; j \u0026lt;= currentIndex + 2; j++) { if (j \u0026lt; 0 || j \u0026gt;= dogs.length || currentIndex == j) { continue; } if (dogs[currentIndex].weightInPounds \u0026lt;= dogs[j].weightInPounds) { return false; } } return true; } public static Dog[] largerThanFourNeighbors(Dog[] dogs) { Dog[] returnDogs = new Dog[dogs.length]; int count = 0; for (int i = 0; i \u0026lt; dogs.length; i++) { if (isBiggerThanFourNeighbors(i, dogs)) { returnDogs[count] = dogs[i]; count = count + 1; } } return createNewDogs(returnDogs, count); } public static Dog[] createNewDogs(Dog[] originalDogs, int count) { Dog[] answerDogs = new Dog[count]; for (int i = 0; i \u0026lt; count; i++) { answerDogs[i] = originalDogs[i]; } return answerDogs; } "
+},
+{
+	"uri": "/kr/gitlet/content3/",
+	"title": "Branch and Merge",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/kr/gitlet/content2/",
+	"title": "Git: How it works",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/kr/gitlet/content1/",
+	"title": "What is git?",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "/kr/categories/",

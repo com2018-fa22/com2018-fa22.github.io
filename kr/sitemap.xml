@@ -108,6 +108,9 @@
     <loc>/kr/lecture12/</loc>
     <lastmod>2022-01-10T10:33:49+09:00</lastmod>
   </url><url>
+    <loc>/kr/gitlet/</loc>
+    <lastmod>2021-12-25T10:22:11+09:00</lastmod>
+  </url><url>
     <loc>/kr/lecture12/content1/</loc>
     <lastmod>2022-12-20T10:35:10+09:00</lastmod>
   </url><url>
@@ -277,6 +280,15 @@
                 hreflang="kr"
                 href="/kr/lecture3/content2/"
                 />
+  </url><url>
+    <loc>/kr/gitlet/content3/</loc>
+    <lastmod>2022-03-25T10:28:31+09:00</lastmod>
+  </url><url>
+    <loc>/kr/gitlet/content2/</loc>
+    <lastmod>2022-02-25T10:28:28+09:00</lastmod>
+  </url><url>
+    <loc>/kr/gitlet/content1/</loc>
+    <lastmod>2022-01-25T10:28:26+09:00</lastmod>
   </url><url>
     <loc>/kr/categories/</loc>
     <xhtml:link

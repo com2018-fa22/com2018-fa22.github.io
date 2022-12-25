@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gitlet on Documentation for Hugo Learn Theme</title>
+    <link>/kr/gitlet/</link>
+    <description>Recent content in Gitlet on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 25 Dec 2021 10:22:11 +0900</lastBuildDate><atom:link href="/kr/gitlet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Branch and Merge</title>
+      <link>/kr/gitlet/content3/</link>
+      <pubDate>Fri, 25 Mar 2022 10:28:31 +0900</pubDate>
+      
+      <guid>/kr/gitlet/content3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git: How it works</title>
+      <link>/kr/gitlet/content2/</link>
+      <pubDate>Fri, 25 Feb 2022 10:28:28 +0900</pubDate>
+      
+      <guid>/kr/gitlet/content2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What is git?</title>
+      <link>/kr/gitlet/content1/</link>
+      <pubDate>Tue, 25 Jan 2022 10:28:26 +0900</pubDate>
+      
+      <guid>/kr/gitlet/content1/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
